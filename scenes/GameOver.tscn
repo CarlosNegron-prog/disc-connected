@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://bqss2tudyxsad"]
+
+[ext_resource type="Texture2D" uid="uid://bw031xl7ehm52" path="res://Backgrounds/Tron Background.png" id="1_qae0b"]
+[ext_resource type="Script" uid="uid://caxk4ppa3mbjt" path="res://scripts/game_over.gd" id="1_vuicl"]
+[ext_resource type="FontFile" uid="uid://b8uai7k484bcd" path="res://Fonts/Tiny5-Regular.ttf" id="2_vuicl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4noiy"]
+font = ExtResource("2_vuicl")
+font_size = 70
+font_color = Color(0.33333334, 0.92941177, 0.99607843, 1)
+outline_color = Color(0, 0.21568628, 0.24705882, 0.7529412)
+shadow_size = 0
+shadow_color = Color(0, 0.3254902, 0.3254902, 0.28235295)
+shadow_offset = Vector2(0, 0)
+stacked_outline_count = 4
+stacked_outline_0/size = 3
+stacked_outline_0/color = Color(0.17254902, 0.7411765, 0.80784315, 1)
+stacked_outline_1/size = 3
+stacked_outline_1/color = Color(0.12156863, 0.54509807, 0.5921569, 1)
+stacked_outline_2/color = Color(1, 1, 1, 1)
+stacked_outline_3/size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_gijjb"]
+line_spacing = 10.0
+paragraph_spacing = 10.0
+font = ExtResource("2_vuicl")
+font_size = 32
+font_color = Color(0.33333334, 0.92941177, 0.99607843, 1)
+outline_color = Color(0, 0.21568628, 0.24705882, 0.7529412)
+shadow_size = 0
+shadow_color = Color(0, 0.3254902, 0.3254902, 0.28235295)
+shadow_offset = Vector2(0, 0)
+stacked_outline_count = 4
+stacked_outline_0/size = 2
+stacked_outline_0/color = Color(0.17254902, 0.7411765, 0.80784315, 1)
+stacked_outline_1/size = 2
+stacked_outline_1/color = Color(0.12156863, 0.54509807, 0.5921569, 1)
+stacked_outline_2/color = Color(1, 1, 1, 1)
+stacked_outline_3/size = 13
+
+[node name="Control" type="Control" unique_id=114489992]
+layout_mode = 3
+anchor_right = 2.398
+anchor_bottom = 2.404
+offset_right = -671.04004
+offset_bottom = -379.08002
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vuicl")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=673990645]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+texture = ExtResource("1_qae0b")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="." unique_id=550363565]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.514
+anchor_top = -0.11100001
+anchor_right = 0.483
+anchor_bottom = 0.638
+offset_left = 287.72
+offset_top = 55.97
+offset_right = 208.16307
+offset_bottom = -65.51101
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_4noiy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=129677098]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 152.0
+offset_right = 340.0
+offset_bottom = 196.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+autowrap_trim_flags = 192
+
+[node name="Label2" type="Label" parent="Button" unique_id=1313581554]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 4.0
+offset_right = 183.0
+offset_bottom = 40.0
+text = "PLAY AGAIN"
+label_settings = SubResource("LabelSettings_gijjb")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="." unique_id=51461344]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 208.0
+offset_right = 340.0
+offset_bottom = 252.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+autowrap_trim_flags = 192
+
+[node name="Label3" type="Label" parent="Button2" unique_id=1225197520]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 5.0
+offset_right = 128.0
+offset_bottom = 41.0
+text = "QUIT"
+label_settings = SubResource("LabelSettings_gijjb")
+horizontal_alignment = 1
+vertical_alignment = 1
