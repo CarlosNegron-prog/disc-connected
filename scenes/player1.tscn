@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b2tghi52rh2ej"]
 
 [ext_resource type="Texture2D" uid="uid://ddrjvqcch6nm6" path="res://sprites/knight.png" id="1_igli2"]
+[ext_resource type="PackedScene" uid="uid://dlq2sd17q873c" path="res://interactions components/interactable.tscn" id="2_qir2g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qir2g"]
 atlas = ExtResource("1_igli2")
@@ -54,3 +55,5 @@ frame_progress = 0.7401885
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2095837546]
 position = Vector2(0, -5)
 shape = SubResource("CircleShape2D_igli2")
+
+[node name="InteractingComponent" parent="." unique_id=562046181 instance=ExtResource("2_qir2g")]
