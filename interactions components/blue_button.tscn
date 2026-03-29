@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c2xpqhmuhuiob"]
+
+[ext_resource type="Script" uid="uid://cvyg5r1mjadjk" path="res://interactions components/blue_button.gd" id="1_kccn6"]
+[ext_resource type="Texture2D" uid="uid://duf30i5usucv2" path="res://map2/objects/digicode.png" id="1_slk8f"]
+[ext_resource type="PackedScene" uid="uid://cwb7fre0ec642" path="res://interactable.tscn" id="3_kccn6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dgo2m"]
+size = Vector2(8, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ky2yl"]
+radius = 11.0
+
+[node name="blue_button" type="StaticBody2D" unique_id=1386387815]
+script = ExtResource("1_kccn6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1261975420]
+shape = SubResource("RectangleShape2D_dgo2m")
+
+[node name="Digicode" type="Sprite2D" parent="." unique_id=1174090072]
+texture = ExtResource("1_slk8f")
+
+[node name="interactable" parent="." unique_id=1181164422 instance=ExtResource("3_kccn6")]
+interact_name = "activate button"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable" unique_id=1940557639]
+shape = SubResource("CircleShape2D_ky2yl")

@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://donbfrr61bx7"]
+
+[ext_resource type="Script" uid="uid://qhd6qshrb3e" path="res://scripts/enemy_triangle.gd" id="1_cjt2j"]
+[ext_resource type="Texture2D" uid="uid://b26bk0377bpqe" path="res://sprites/slime_green.png" id="1_qpht1"]
+[ext_resource type="PackedScene" uid="uid://7omxv7xq2wyk" path="res://scenes/kill_zone.tscn" id="3_5drax"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kg0fb"]
+atlas = ExtResource("1_qpht1")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjt2j"]
+atlas = ExtResource("1_qpht1")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5drax"]
+atlas = ExtResource("1_qpht1")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swa82"]
+atlas = ExtResource("1_qpht1")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8b3eh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kg0fb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjt2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5drax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swa82")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_swa82"]
+size = Vector2(12, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjt2j"]
+size = Vector2(10, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cjt2j"]
+radius = 98.12747
+
+[node name="EnemyT" type="Node2D" unique_id=1218782301]
+
+[node name="Triangle" type="CharacterBody2D" parent="." unique_id=1880707407]
+script = ExtResource("1_cjt2j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Triangle" unique_id=1132831857]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_8b3eh")
+autoplay = "default"
+frame_progress = 0.077851914
+
+[node name="Hitbox" parent="Triangle" unique_id=1534225847 instance=ExtResource("3_5drax")]
+position = Vector2(0, -12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triangle/Hitbox" unique_id=326644955]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_swa82")
+
+[node name="Timer2" type="Timer" parent="Triangle/Hitbox" unique_id=1079937780]
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triangle" unique_id=1725085515]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_cjt2j")
+
+[node name="DetectionZone" type="Area2D" parent="Triangle" unique_id=533066903]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triangle/DetectionZone" unique_id=1997618971]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_cjt2j")
+
+[connection signal="timeout" from="Triangle/Hitbox/Timer2" to="Triangle/Hitbox" method="_on_timer_2_timeout"]
+[connection signal="body_entered" from="Triangle/DetectionZone" to="Triangle" method="_on_detection_zone_body_entered"]
+[connection signal="body_exited" from="Triangle/DetectionZone" to="Triangle" method="_on_detection_zone_body_exited"]
