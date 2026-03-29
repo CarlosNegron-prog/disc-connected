@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b2tghi52rh2ej"]
 
 [ext_resource type="Texture2D" uid="uid://ddrjvqcch6nm6" path="res://sprites/knight.png" id="1_igli2"]
-[ext_resource type="PackedScene" uid="uid://dlq2sd17q873c" path="res://interactions components/interactable.tscn" id="2_qir2g"]
+[ext_resource type="PackedScene" uid="uid://dlq2sd17q873c" path="res://interactions components/interacting_component.tscn" id="2_qir2g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qir2g"]
 atlas = ExtResource("1_igli2")
