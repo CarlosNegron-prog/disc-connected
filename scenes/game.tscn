@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://sy7s5373yn2l"]
 
 [ext_resource type="PackedScene" uid="uid://b2tghi52rh2ej" path="res://scenes/player1.tscn" id="1_uwrxv"]
-[ext_resource type="Script" uid="uid://b2blie1kss3ov" path="res://scripts/player_1.gd" id="2_yqjtg"]
+[ext_resource type="Script" path="res://scripts/player_1.gd" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://donbfrr61bx7" path="res://scenes/EnemyT.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://bq1qllrn8mked" path="res://scenes/EnemyC.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://c2xpqhmuhuiob" path="res://interactions components/blue_button.tscn" id="4_lbhrr"]
 
 [node name="Game" type="Node2D" unique_id=353422254]
@@ -17,10 +18,14 @@ script = ExtResource("2_yqjtg")
 
 [node name="Camera2D" type="Camera2D" parent="Entities/Player1" unique_id=1048469817]
 zoom = Vector2(2, 2)
+zoom = Vector2(2, 2)
 position_smoothing_speed = 9.0
 
 [node name="Triangle" parent="Entities" unique_id=1598586541 instance=ExtResource("3_lnu2h")]
 position = Vector2(127, 96)
+
+[node name="EnemyC" parent="." unique_id=26849449 instance=ExtResource("4_lbhrr")]
+position = Vector2(-111, 121)
 
 [node name="blue_button" parent="Entities" unique_id=1813198998 instance=ExtResource("4_lbhrr")]
 position = Vector2(0, 1)
