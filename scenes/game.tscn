@@ -6,13 +6,13 @@
 
 [node name="Game" type="Node2D" unique_id=353422254]
 
-[node name="Player1" parent="." unique_id=1432727010 groups=["player"] instance=ExtResource("1_uwrxv")]
+[node name="Player1" parent="." unique_id=1432727010 instance=ExtResource("1_uwrxv")]
 position = Vector2(16, 57)
 script = ExtResource("2_yqjtg")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1048469817]
-position = Vector2(16, 57)
+[node name="Camera2D" type="Camera2D" parent="Player1" unique_id=1048469817]
 zoom = Vector2(4, 4)
+position_smoothing_speed = 9.0
 
 [node name="Triangle" parent="." unique_id=1598586541 instance=ExtResource("3_lnu2h")]
-position = Vector2(25, 27)
+position = Vector2(127, 96)
