@@ -1,23 +1,24 @@
-extends Node2D
+extends CharacterBody2D
 
+@export var speed = 150.0
+@export var acceleration = 0.05
 
-const SPEED = 60
+var player = null
 
-var direction = 1
+func _ready():
+	# Find the player in the scene tree
+	# Make sure your Player node is added to a group named "player"
+	var players = get_tree().get_nodes_in_group("player")
+	if players.size() > 0:
+		player = players[0]
 
-@onready var ray_cast_left: RayCast2D = $RayCastLeft
-@onready var ray_cast_right: RayCast2D = $RayCastRight
-
-@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if ray_cast_right.is_colliding():
-		direction = -1
-		animated_sprite.flip_h = true
+func _physics_process(_delta):
+	if player:
+		# 1. Calculate the direction toward the player
+		var direction = (player.global_position - global_position).normalized()
 		
-	if ray_cast_left.is_colliding():
-		direction = 1
-		animated_sprite.flip_h = false
+		# 2. Move toward the player slowly
+		velocity = velocity.lerp(direction * speed, acceleration)
 		
-	position.x += direction * SPEED * delta
+		# 3. Apply movement and handle collisions
+		move_and_slide()

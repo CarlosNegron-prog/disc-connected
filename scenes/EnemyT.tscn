@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://tvyoa7xjrwyb"]
+[gd_scene format=3 uid="uid://donbfrr61bx7"]
 
 [ext_resource type="Script" uid="uid://qhd6qshrb3e" path="res://scripts/enemy_triangle.gd" id="1_cjt2j"]
 [ext_resource type="Texture2D" uid="uid://b26bk0377bpqe" path="res://sprites/slime_green.png" id="1_qpht1"]
@@ -43,27 +43,32 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swa82"]
 size = Vector2(12, 12)
 
-[node name="EnemyT" type="Node2D" unique_id=1598586541]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cjt2j"]
+size = Vector2(10, 10)
 
-[node name="EnemyTriangle" type="Node2D" parent="." unique_id=889713416]
+[node name="EnemyT" type="Node2D" unique_id=1218782301]
+
+[node name="Triangle" type="CharacterBody2D" parent="." unique_id=1880707407]
 script = ExtResource("1_cjt2j")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="EnemyTriangle" unique_id=1132831857]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Triangle" unique_id=1132831857]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_8b3eh")
 autoplay = "default"
 frame_progress = 0.077851914
 
-[node name="KillZone" parent="EnemyTriangle/AnimatedSprite2D" unique_id=1534225847 instance=ExtResource("3_5drax")]
+[node name="Hitbox" parent="Triangle" unique_id=1534225847 instance=ExtResource("3_5drax")]
+position = Vector2(0, -12)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyTriangle/AnimatedSprite2D/KillZone" unique_id=326644955]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triangle/Hitbox" unique_id=326644955]
 position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_swa82")
 
-[node name="RayCastLeft" type="RayCast2D" parent="EnemyTriangle" unique_id=1994203577]
-position = Vector2(0, -6)
-target_position = Vector2(-9, 0)
+[node name="Timer2" type="Timer" parent="Triangle/Hitbox" unique_id=1079937780]
+one_shot = true
 
-[node name="RayCastRight" type="RayCast2D" parent="EnemyTriangle" unique_id=974039516]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Triangle" unique_id=1725085515]
 position = Vector2(0, -6)
-target_position = Vector2(9, 0)
+shape = SubResource("RectangleShape2D_cjt2j")
+
+[connection signal="timeout" from="Triangle/Hitbox/Timer2" to="Triangle/Hitbox" method="_on_timer_2_timeout"]
