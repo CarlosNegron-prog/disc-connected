@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dk3d6dno766pw" path="res://map/switch2/switch0.png" id="11_sw0"]
 [ext_resource type="PackedScene" uid="uid://donbfrr61bx7" path="res://scenes/EnemyT.tscn" id="12_kvuet"]
 [ext_resource type="Texture2D" uid="uid://mvjvugi85o0m" path="res://map2/door/door_closed.png" id="14_door"]
+[ext_resource type="Texture2D" path="res://Charactersbynat/player2Disc.png" id="15_p2disc"]
 
 [sub_resource type="RectangleShape2D" id="Sub_btn1_phys"]
 size = Vector2(8, 10)
@@ -151,6 +152,17 @@ font_size = 11
 font_color = Color(0.2, 1, 0.2, 1)
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p2disc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_p2disc")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="Game" type="Node2D" unique_id=1098071039]
 script = ExtResource("6_gmscript")
@@ -341,6 +353,11 @@ z_index = 100
 z_as_relative = false
 position = Vector2(89, 140)
 script = ExtResource("3_p2script")
+
+[node name="AnimatedSprite2D" parent="RightContainer/RightViewport/Player2"]
+sprite_frames = SubResource("SpriteFrames_p2disc")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="Camera2D" type="Camera2D" parent="RightContainer/RightViewport/Player2" unique_id=1130301936]
 zoom = Vector2(2, 2)

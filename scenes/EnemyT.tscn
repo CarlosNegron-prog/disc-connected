@@ -1,50 +1,25 @@
 [gd_scene format=3 uid="uid://donbfrr61bx7"]
 
 [ext_resource type="Script" uid="uid://qhd6qshrb3e" path="res://scripts/enemy_triangle.gd" id="1_cjt2j"]
-[ext_resource type="Texture2D" uid="uid://b26bk0377bpqe" path="res://sprites/slime_green.png" id="1_qpht1"]
+[ext_resource type="Texture2D" path="res://Charactersbynat/Triangle.png" id="1_qpht1"]
 [ext_resource type="PackedScene" path="res://scenes/kill_zone.tscn" id="3_5drax"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kg0fb"]
-atlas = ExtResource("1_qpht1")
-region = Rect2(0, 24, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cjt2j"]
-atlas = ExtResource("1_qpht1")
-region = Rect2(24, 24, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5drax"]
-atlas = ExtResource("1_qpht1")
-region = Rect2(48, 24, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_swa82"]
-atlas = ExtResource("1_qpht1")
-region = Rect2(72, 24, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8b3eh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kg0fb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cjt2j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5drax")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_swa82")
+"texture": ExtResource("1_qpht1")
 }],
 "loop": true,
 "name": &"default",
-"speed": 10.0
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_swa82"]
-size = Vector2(12, 12)
+size = Vector2(24, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cjt2j"]
-size = Vector2(10, 10)
+size = Vector2(24, 24)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cjt2j"]
 radius = 131.06105
@@ -58,6 +33,7 @@ acceleration = 0.04
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Triangle" unique_id=1132831857]
 position = Vector2(0, -12)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_8b3eh")
 autoplay = "default"
 frame_progress = 0.077851914

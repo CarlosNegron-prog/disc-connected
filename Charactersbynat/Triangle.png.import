@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqk7wmboexe0t"
-path="res://.godot/imported/sr5z540c50c616aws3.png-ab35fe1128665df7f149c509f0812622.ctex"
+uid="uid://d2haf154rq0f0"
+path="res://.godot/imported/Triangle.png-3c1b3bb3c9e9cd177f9fff24f2e384af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Charactersbynat/sr5z540c50c616aws3.png"
-dest_files=["res://.godot/imported/sr5z540c50c616aws3.png-ab35fe1128665df7f149c509f0812622.ctex"]
+source_file="res://Charactersbynat/Triangle.png"
+dest_files=["res://.godot/imported/Triangle.png-3c1b3bb3c9e9cd177f9fff24f2e384af.ctex"]
 
 [params]
 
