@@ -806,6 +806,7 @@ sources/11 = SubResource("TileSetAtlasSource_aicyk")
 sources/12 = SubResource("TileSetAtlasSource_8b0r0")
 
 [node name="Level2" type="Node2D" unique_id=1703235890]
+z_index = -1
 
 [node name="TilemapLayers" type="Node2D" parent="." unique_id=1848682760]
 
