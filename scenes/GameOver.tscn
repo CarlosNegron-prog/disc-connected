@@ -1,12 +1,32 @@
 [gd_scene format=3 uid="uid://bqss2tudyxsad"]
 
-[ext_resource type="Texture2D" uid="uid://bw031xl7ehm52" path="res://Backgrounds/Tron Background.png" id="1_qae0b"]
 [ext_resource type="Script" uid="uid://caxk4ppa3mbjt" path="res://scripts/game_over.gd" id="1_vuicl"]
+[ext_resource type="Texture2D" uid="uid://chdbtjb8baget" path="res://Intro Elements/5 Logo/Logo1.png" id="2_4h8ls"]
 [ext_resource type="FontFile" uid="uid://b8uai7k484bcd" path="res://Fonts/Tiny5-Regular.ttf" id="2_vuicl"]
+[ext_resource type="Texture2D" uid="uid://x16okodbjq0i" path="res://Intro Elements/9 Other/Screenshot 2026-03-29 at 23-16-37 Cyber Intrusion Free GUI Pixel Art Pack - CraftPix.net.png" id="3_m0y6l"]
+[ext_resource type="Texture2D" uid="uid://b24vrkxtridxp" path="res://Intro Elements/1 Frames/Frame_56.png" id="4_x0efx"]
+[ext_resource type="Texture2D" uid="uid://c76i7hhb07k1h" path="res://Intro Elements/9 Other/1 Decor/1.png" id="5_ya815"]
+[ext_resource type="Texture2D" uid="uid://de63x3s5ojg44" path="res://Intro Elements/9 Other/Screenshot 2026-03-29 at 23-51-33 Cyber Intrusion Free GUI Pixel Art Pack - CraftPix.net.png" id="6_kthvs"]
+[ext_resource type="Texture2D" uid="uid://6o5glt7niviy" path="res://Intro Elements/3 Icons/Icons/Icon_02.png" id="7_c6ex5"]
+[ext_resource type="Texture2D" uid="uid://cjjmwsvlqokkp" path="res://Intro Elements/3 Icons/Icons/Icon_04.png" id="8_cnr6c"]
+[ext_resource type="Texture2D" uid="uid://dcosubix7cq8y" path="res://Intro Elements/3 Icons/Icons/Icon_07.png" id="9_br03c"]
+[ext_resource type="Texture2D" uid="uid://d34beu8s1c246" path="res://Intro Elements/3 Icons/Icons/Icon_08.png" id="10_ooglx"]
+[ext_resource type="Texture2D" uid="uid://bvnglunjogkfo" path="res://Intro Elements/3 Icons/Icons/Icon_36.png" id="11_ud88r"]
+[ext_resource type="Texture2D" uid="uid://djt6le5lg1c4j" path="res://Intro Elements/3 Icons/Icons/Icon_32.png" id="12_xgn67"]
+[ext_resource type="Texture2D" uid="uid://cp6bj4o6xskp7" path="res://Intro Elements/2 Bars/EnergyBar2.png" id="13_566me"]
+[ext_resource type="Texture2D" uid="uid://dw200eqdqp6ie" path="res://Intro Elements/1 Frames/Frame_08.png" id="14_xou34"]
+[ext_resource type="Texture2D" uid="uid://cqpgp88ntsua1" path="res://Intro Elements/1 Frames/Frame_11.png" id="15_5hhgu"]
+[ext_resource type="Texture2D" uid="uid://blnmmxqwfcy3n" path="res://Intro Elements/1 Frames/Frame_79.png" id="16_v1id7"]
+[ext_resource type="Texture2D" uid="uid://05baiinn2mho" path="res://Intro Elements/1 Frames/Frame_80.png" id="17_y2xt1"]
+[ext_resource type="FontFile" uid="uid://cjh8sy4fnc1gf" path="res://Intro Elements/10 Font/CyberpunkCraftpixPixel.otf" id="18_tn36m"]
+[ext_resource type="Texture2D" uid="uid://cjgkvqm0ynxsw" path="res://Intro Elements/8 Cursors/2.png" id="20_8q41e"]
+[ext_resource type="Texture2D" uid="uid://2q5v5a8x2jum" path="res://Intro Elements/9 Other/3 Skill icons/Skillicon7_19.png" id="21_x5jh4"]
+[ext_resource type="Texture2D" uid="uid://dos3rea5fwml5" path="res://Intro Elements/9 Other/3 Skill icons/Skillicon7_15.png" id="22_k65fp"]
+[ext_resource type="Texture2D" uid="uid://kfhmlhi6rh5b" path="res://Intro Elements/3 Icons/Icons/Icon_23.png" id="23_i57qg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4noiy"]
-font = ExtResource("2_vuicl")
-font_size = 70
+font = ExtResource("18_tn36m")
+font_size = 40
 font_color = Color(0.33333334, 0.92941177, 0.99607843, 1)
 outline_color = Color(0, 0.21568628, 0.24705882, 0.7529412)
 shadow_size = 0
@@ -24,7 +44,7 @@ stacked_outline_3/size = 20
 line_spacing = 10.0
 paragraph_spacing = 10.0
 font = ExtResource("2_vuicl")
-font_size = 32
+font_size = 24
 font_color = Color(0.33333334, 0.92941177, 0.99607843, 1)
 outline_color = Color(0, 0.21568628, 0.24705882, 0.7529412)
 shadow_size = 0
@@ -48,12 +68,143 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vuicl")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=673990645]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1732998324]
 layout_mode = 0
 offset_right = 480.0
 offset_bottom = 270.0
-texture = ExtResource("1_qae0b")
-expand_mode = 1
+color = Color(0, 0, 0, 1)
+
+[node name="Logo1" type="Sprite2D" parent="." unique_id=1190511005]
+position = Vector2(239.00002, 135)
+scale = Vector2(1.6561403, 2.347826)
+texture = ExtResource("2_4h8ls")
+
+[node name="Screenshot20260329At231637CyberIntrusionFreeGuiPixelArtPackCraftPix_net" type="Sprite2D" parent="." unique_id=1341544112]
+position = Vector2(106.00001, 237.00002)
+scale = Vector2(0.35220996, 0.40454483)
+texture = ExtResource("3_m0y6l")
+
+[node name="Frame56" type="Sprite2D" parent="." unique_id=87678660]
+position = Vector2(138, 227.5)
+scale = Vector2(0.0625, 0.15625033)
+texture = ExtResource("4_x0efx")
+
+[node name="Frame57" type="Sprite2D" parent="." unique_id=1203170542]
+position = Vector2(135.875, 226)
+scale = Vector2(0.11718816, 0.062500186)
+texture = ExtResource("4_x0efx")
+
+[node name="Frame58" type="Sprite2D" parent="." unique_id=1999536706]
+position = Vector2(136.75, 227.375)
+scale = Vector2(0.046875, 0.03906238)
+texture = ExtResource("4_x0efx")
+
+[node name="Frame59" type="Sprite2D" parent="." unique_id=443387687]
+position = Vector2(139.07813, 246.67967)
+scale = Vector2(0.18261667, 0.1450205)
+texture = ExtResource("4_x0efx")
+
+[node name="Frame60" type="Sprite2D" parent="." unique_id=1834953335]
+position = Vector2(136.74759, 249.55257)
+scale = Vector2(0.14077605, 0.15296572)
+texture = ExtResource("4_x0efx")
+
+[node name="Frame61" type="Sprite2D" parent="." unique_id=921643489]
+position = Vector2(136, 247)
+scale = Vector2(0.0686034, 0.05523827)
+texture = ExtResource("4_x0efx")
+
+[node name="Frame65" type="Sprite2D" parent="." unique_id=1680510075]
+position = Vector2(75.7668, 248)
+scale = Vector2(0.11042455, 0.021030946)
+texture = ExtResource("4_x0efx")
+
+[node name="Frame66" type="Sprite2D" parent="." unique_id=1511408857]
+position = Vector2(75.79434, 246.99998)
+scale = Vector2(0.07535382, 0.06249981)
+texture = ExtResource("4_x0efx")
+
+[node name="Frame67" type="Sprite2D" parent="." unique_id=1697512206]
+position = Vector2(74.39977, 247.5)
+scale = Vector2(0.037514023, 0.21875027)
+texture = ExtResource("4_x0efx")
+
+[node name="Frame68" type="Sprite2D" parent="." unique_id=452354973]
+position = Vector2(73.257324, 226.9433)
+scale = Vector2(-0.10051538, 0.1596656)
+texture = ExtResource("4_x0efx")
+
+[node name="Frame69" type="Sprite2D" parent="." unique_id=398843884]
+position = Vector2(73.5, 225.49998)
+scale = Vector2(0.21875009, 0.093749836)
+texture = ExtResource("4_x0efx")
+
+[node name="Frame70" type="Sprite2D" parent="." unique_id=975072571]
+position = Vector2(75, 225.3047)
+scale = Vector2(0.047851603, 0.16845605)
+texture = ExtResource("4_x0efx")
+
+[node name="1" type="Sprite2D" parent="." unique_id=1142205853]
+position = Vector2(239.00002, 193.7024)
+rotation = -3.1415927
+scale = Vector2(1.2812499, 0.51277906)
+texture = ExtResource("5_ya815")
+
+[node name="Screenshot20260329At235133CyberIntrusionFreeGuiPixelArtPackCraftPix_net2" type="Sprite2D" parent="." unique_id=800824380]
+position = Vector2(113.00001, 259)
+scale = Vector2(0.37499943, 1.2608687)
+texture = ExtResource("6_kthvs")
+
+[node name="Icon02" type="Sprite2D" parent="." unique_id=183528339]
+position = Vector2(440, 57)
+texture = ExtResource("7_c6ex5")
+
+[node name="Icon04" type="Sprite2D" parent="." unique_id=1068401333]
+position = Vector2(406, 61)
+texture = ExtResource("8_cnr6c")
+
+[node name="Icon07" type="Sprite2D" parent="." unique_id=1061444885]
+position = Vector2(442, 138)
+texture = ExtResource("9_br03c")
+
+[node name="Icon08" type="Sprite2D" parent="." unique_id=584357979]
+position = Vector2(428, 138)
+texture = ExtResource("10_ooglx")
+
+[node name="Icon36" type="Sprite2D" parent="." unique_id=171752131]
+position = Vector2(423, 57)
+texture = ExtResource("11_ud88r")
+
+[node name="Icon32" type="Sprite2D" parent="." unique_id=1815898621]
+position = Vector2(412, 138)
+rotation = -1.5707964
+texture = ExtResource("12_xgn67")
+
+[node name="EnergyBar2" type="Sprite2D" parent="." unique_id=118878338]
+position = Vector2(127.5, 67.5)
+scale = Vector2(1.1874998, 2.2)
+texture = ExtResource("13_566me")
+
+[node name="Frame08" type="Sprite2D" parent="." unique_id=1623657881]
+position = Vector2(239, 235)
+texture = ExtResource("14_xou34")
+
+[node name="Frame11" type="Sprite2D" parent="." unique_id=1260917631]
+position = Vector2(174, 237)
+texture = ExtResource("15_5hhgu")
+
+[node name="Frame79" type="Sprite2D" parent="." unique_id=2051530318]
+position = Vector2(389, 236)
+texture = ExtResource("16_v1id7")
+
+[node name="Frame80" type="Sprite2D" parent="." unique_id=1735607381]
+position = Vector2(350, 236)
+texture = ExtResource("17_y2xt1")
+
+[node name="Frame12" type="Sprite2D" parent="." unique_id=709586420]
+position = Vector2(296, 237)
+rotation = 1.5707964
+texture = ExtResource("15_5hhgu")
 
 [node name="Label" type="Label" parent="." unique_id=550363565]
 layout_mode = 1
@@ -62,10 +213,10 @@ anchor_left = -0.514
 anchor_top = -0.11100001
 anchor_right = 0.483
 anchor_bottom = 0.638
-offset_left = 287.72
-offset_top = 55.97
-offset_right = 208.16307
-offset_bottom = -65.51101
+offset_left = 198.72
+offset_top = 66.97
+offset_right = 161.15999
+offset_bottom = -61.26001
 text = "GAME OVER"
 label_settings = SubResource("LabelSettings_4noiy")
 horizontal_alignment = 1
@@ -73,10 +224,10 @@ vertical_alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=129677098]
 layout_mode = 0
-offset_left = 144.0
-offset_top = 152.0
-offset_right = 340.0
-offset_bottom = 196.0
+offset_left = 57.0
+offset_top = 107.0
+offset_right = 196.0
+offset_bottom = 139.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
@@ -84,10 +235,10 @@ autowrap_trim_flags = 192
 
 [node name="Label2" type="Label" parent="Button" unique_id=1313581554]
 layout_mode = 0
-offset_left = 15.0
-offset_top = 4.0
-offset_right = 183.0
-offset_bottom = 40.0
+offset_left = 8.0
+offset_top = 2.0
+offset_right = 134.0
+offset_bottom = 29.0
 text = "PLAY AGAIN"
 label_settings = SubResource("LabelSettings_gijjb")
 horizontal_alignment = 1
@@ -95,10 +246,10 @@ vertical_alignment = 1
 
 [node name="Button2" type="Button" parent="." unique_id=51461344]
 layout_mode = 0
-offset_left = 144.0
-offset_top = 208.0
-offset_right = 340.0
-offset_bottom = 252.0
+offset_left = 214.0
+offset_top = 107.0
+offset_right = 353.0
+offset_bottom = 139.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
@@ -106,11 +257,85 @@ autowrap_trim_flags = 192
 
 [node name="Label3" type="Label" parent="Button2" unique_id=1225197520]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 5.0
-offset_right = 128.0
-offset_bottom = 41.0
+offset_left = 34.0
+offset_top = -2.0
+offset_right = 98.0
+offset_bottom = 34.0
 text = "QUIT"
 label_settings = SubResource("LabelSettings_gijjb")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="2" type="Sprite2D" parent="." unique_id=265082013]
+position = Vector2(356, 136)
+scale = Vector2(1.1666666, 0.97619045)
+texture = ExtResource("20_8q41e")
+
+[node name="Skillicon719" type="Sprite2D" parent="." unique_id=1842789122]
+position = Vector2(371, 70)
+scale = Vector2(1.125, 1.1875)
+texture = ExtResource("21_x5jh4")
+
+[node name="Skillicon715" type="Sprite2D" parent="." unique_id=1016488489]
+position = Vector2(386, 88)
+texture = ExtResource("22_k65fp")
+
+[node name="Skillicon716" type="Sprite2D" parent="." unique_id=928186537]
+position = Vector2(356, 88)
+texture = ExtResource("22_k65fp")
+flip_h = true
+
+[node name="Icon23" type="Sprite2D" parent="." unique_id=1374827051]
+position = Vector2(370.00003, 87)
+scale = Vector2(0.3125, 0.4375)
+texture = ExtResource("23_i57qg")
+
+[node name="Icon05" type="Sprite2D" parent="." unique_id=1066285975]
+position = Vector2(367, 86)
+rotation = 1.5707964
+scale = Vector2(0.5341359, 0.30923337)
+texture = ExtResource("8_cnr6c")
+
+[node name="Icon05" type="Sprite2D" parent="Icon05" unique_id=1933539142]
+position = Vector2(-1.8721809, 6.4675984)
+rotation = 1.5707964
+scale = Vector2(-0.325217, 3.337615)
+texture = ExtResource("8_cnr6c")
+
+[node name="Icon05" type="Sprite2D" parent="Icon05/Icon05" unique_id=1172357005]
+position = Vector2(-19.886923, 0.63695097)
+rotation = 1.5707964
+scale = Vector2(-0.3608722, 3.337615)
+texture = ExtResource("8_cnr6c")
+
+[node name="Icon06" type="Sprite2D" parent="Icon05" unique_id=1419481539]
+position = Vector2(-5.662441e-07, -25.870407)
+rotation = 3.1415927
+scale = Vector2(1.0682143, 1.0175508)
+texture = ExtResource("8_cnr6c")
+
+[node name="Icon05" type="Sprite2D" parent="Icon05/Icon06" unique_id=1587490746]
+position = Vector2(1.6607268, 6.3560643)
+rotation = 1.5707964
+scale = Vector2(-0.325217, 3.337615)
+texture = ExtResource("8_cnr6c")
+
+[node name="Icon05" type="Sprite2D" parent="Icon05/Icon06/Icon05" unique_id=1617067938]
+position = Vector2(-19.543968, -0.5526479)
+rotation = 1.5707964
+scale = Vector2(-0.3608722, 3.337615)
+texture = ExtResource("8_cnr6c")
+
+[node name="Icon05" type="Sprite2D" parent="Icon05/Icon06/Icon05/Icon05" unique_id=807073187]
+position = Vector2(-4.3653727, -17.567091)
+rotation = 1.5707964
+scale = Vector2(-0.30887416, 1.9065585)
+texture = ExtResource("8_cnr6c")
+
+[node name="Button3" type="Button" parent="." unique_id=1153789407]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 433.0
+offset_top = 51.0
+offset_right = 447.0
+offset_bottom = 63.0
