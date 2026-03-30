@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://bq1qllrn8mked"]
+
+[ext_resource type="Script" uid="uid://b0130wwc20sqd" path="res://scripts/enemy_cross.gd" id="1_3jp1e"]
+[ext_resource type="Texture2D" uid="uid://w0fvydfcn5wc" path="res://sprites/slime_purple.png" id="2_uxpfm"]
+[ext_resource type="PackedScene" uid="uid://7omxv7xq2wyk" path="res://scenes/kill_zone.tscn" id="3_rn5cd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t72t"]
+atlas = ExtResource("2_uxpfm")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ng2g"]
+atlas = ExtResource("2_uxpfm")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epe80"]
+atlas = ExtResource("2_uxpfm")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3fyq"]
+atlas = ExtResource("2_uxpfm")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_af0ds"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t72t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ng2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epe80")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3fyq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_quqjv"]
+size = Vector2(12, 13)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gngb7"]
+radius = 154.00325
+
+[node name="EnemyC" type="Node2D" unique_id=26849449]
+
+[node name="Cross" type="CharacterBody2D" parent="." unique_id=1058910778]
+script = ExtResource("1_3jp1e")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Cross" unique_id=1312332376]
+sprite_frames = SubResource("SpriteFrames_af0ds")
+autoplay = "default"
+
+[node name="Hitbox" parent="Cross" unique_id=1534225847 instance=ExtResource("3_rn5cd")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cross/Hitbox" unique_id=322683079]
+unique_name_in_owner = true
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_quqjv")
+
+[node name="Timer2" type="Timer" parent="Cross/Hitbox" unique_id=1044829159]
+one_shot = true
+
+[node name="DetectionZone" type="Area2D" parent="Cross" unique_id=38721204]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cross/DetectionZone" unique_id=918739733]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_gngb7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cross" unique_id=1743182461]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_quqjv")
+
+[connection signal="timeout" from="Cross/Hitbox/Timer2" to="Cross/Hitbox" method="_on_timer_2_timeout"]
+[connection signal="body_entered" from="Cross/DetectionZone" to="Cross" method="_on_detection_zone_body_entered"]
+[connection signal="body_exited" from="Cross/DetectionZone" to="Cross" method="_on_detection_zone_body_exited"]
