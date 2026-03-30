@@ -21,6 +21,12 @@ var door_done: Dictionary = {1: false, 2: false}
 
 func _ready() -> void:
 	add_to_group("game_manager")
+	var _music := AudioStreamPlayer.new()
+	_music.stream = load("res://game music/tech2.mp3")
+	_music.stream.loop = true
+	add_child(_music)
+	_music.play()
+	
 	countdown_label_red.visible = false
 	countdown_label_blue.visible = false
 	puzzle_complete_label.visible = false

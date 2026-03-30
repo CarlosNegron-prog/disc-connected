@@ -12,6 +12,12 @@ var door_used := false
 
 func _ready() -> void:
 	add_to_group("game_manager")
+	var _music := AudioStreamPlayer.new()
+	_music.stream = load("res://game music/tech.mp3")
+	_music.stream.loop = true
+	add_child(_music)
+	_music.play()
+
 	chest_interactable.interact = _on_chest_interact
 	chest_interactable.interact_name = "Open Chest"
 	chest_interactable.is_interactable = true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bcag7hi76i058"
+path="res://.godot/imported/tech2.mp3-c32b39fa846242b8a6b09cc692e7489e.mp3str"
+
+[deps]
+
+source_file="res://game music/tech2.mp3"
+dest_files=["res://.godot/imported/tech2.mp3-c32b39fa846242b8a6b09cc692e7489e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
