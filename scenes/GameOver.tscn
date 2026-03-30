@@ -24,37 +24,37 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_4noiy"]
 font = ExtResource("18_tn36m")
-font_size = 105
-font_color = Color(0.33333334, 0.92941177, 0.99607843, 1)
+font_size = 110
+font_color = Color(0.03137255, 0.36862746, 0.8117647, 1)
 outline_color = Color(0, 0.21568628, 0.24705882, 0.7529412)
 shadow_size = 0
 shadow_color = Color(0, 0.3254902, 0.3254902, 0.28235295)
 shadow_offset = Vector2(0, 0)
 stacked_outline_count = 4
 stacked_outline_0/size = 3
-stacked_outline_0/color = Color(0.17254902, 0.7411765, 0.80784315, 1)
+stacked_outline_0/color = Color(0.0076219137, 0.2038565, 0.47688925, 1)
 stacked_outline_1/size = 3
-stacked_outline_1/color = Color(0.12156863, 0.54509807, 0.5921569, 1)
+stacked_outline_1/color = Color(0.002647047, 0.11183893, 0.28783363, 1)
 stacked_outline_2/color = Color(1, 1, 1, 1)
-stacked_outline_3/size = 20
+stacked_outline_3/size = 35
 
 [sub_resource type="LabelSettings" id="LabelSettings_gijjb"]
 line_spacing = 10.0
 paragraph_spacing = 10.0
 font = ExtResource("2_vuicl")
 font_size = 55
-font_color = Color(0.33333334, 0.92941177, 0.99607843, 1)
+font_color = Color(0.03137255, 0.36862746, 0.8117647, 1)
 outline_color = Color(0, 0.21568628, 0.24705882, 0.7529412)
 shadow_size = 0
 shadow_color = Color(0, 0.3254902, 0.3254902, 0.28235295)
 shadow_offset = Vector2(0, 0)
 stacked_outline_count = 4
 stacked_outline_0/size = 2
-stacked_outline_0/color = Color(0.17254902, 0.7411765, 0.80784315, 1)
+stacked_outline_0/color = Color(0.007843138, 0.20392157, 0.47843137, 1)
 stacked_outline_1/size = 2
-stacked_outline_1/color = Color(0.12156863, 0.54509807, 0.5921569, 1)
+stacked_outline_1/color = Color(0.003921569, 0.10980392, 0.28627452, 1)
 stacked_outline_2/color = Color(1, 1, 1, 1)
-stacked_outline_3/size = 13
+stacked_outline_3/size = 25
 
 [node name="Control" type="Control" unique_id=114489992]
 layout_mode = 3
@@ -73,8 +73,8 @@ offset_bottom = 720.0
 color = Color(0, 0, 0, 1)
 
 [node name="Logo1" type="Sprite2D" parent="." unique_id=1190511005]
-position = Vector2(649.99994, 362.00003)
-scale = Vector2(4.333333, 6.243479)
+position = Vector2(649.99994, 361.5)
+scale = Vector2(4.333333, 6.2347827)
 texture = ExtResource("2_4h8ls")
 
 [node name="Screenshot20260329At231637CyberIntrusionFreeGuiPixelArtPackCraftPix_net" type="Sprite2D" parent="." unique_id=1341544112]
@@ -292,9 +292,9 @@ autowrap_trim_flags = 192
 
 [node name="Label3" type="Label" parent="Button2" unique_id=1225197520]
 layout_mode = 0
-offset_left = 90.0
+offset_left = 107.0
 offset_top = 11.0
-offset_right = 200.0
+offset_right = 217.0
 offset_bottom = 74.0
 text = "QUIT"
 label_settings = SubResource("LabelSettings_gijjb")
@@ -302,8 +302,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="2" type="Sprite2D" parent="." unique_id=265082013]
-position = Vector2(952.00006, 372)
-scale = Vector2(3.9166691, 2.9642851)
+position = Vector2(946, 356)
+scale = Vector2(3.2249968, 2.57738)
 texture = ExtResource("20_8q41e")
 
 [node name="Skillicon719" type="Sprite2D" parent="." unique_id=1842789122]

@@ -1,0 +1,198 @@
+[gd_scene format=3 uid="uid://x10kmdujahw7"]
+
+[ext_resource type="Script" uid="uid://bx8rqwg1buxf8" path="res://scripts/game_info.gd" id="1_k0n1q"]
+[ext_resource type="Texture2D" uid="uid://cre2s12ectnmk" path="res://Intro Elements/9 Other/Screenshot 2026-03-30 at 15-30-42 Cyber Intrusion Free GUI Pixel Art Pack - CraftPix.net.png" id="2_c22pe"]
+[ext_resource type="FontFile" uid="uid://cjh8sy4fnc1gf" path="res://Intro Elements/10 Font/CyberpunkCraftpixPixel.otf" id="3_4wgwo"]
+[ext_resource type="Texture2D" uid="uid://bothpmpgftpja" path="res://Charactersbynat/sr5z22418e5422aws3.png" id="4_nfqhb"]
+[ext_resource type="Texture2D" uid="uid://cjue0unix2mjj" path="res://Intro Elements/9 Other/wasd.png" id="5_5axfm"]
+[ext_resource type="Texture2D" uid="uid://bvrejn3n4t5v3" path="res://Intro Elements/2 Bars/EnergyBar1.png" id="6_banmd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xylsv"]
+font = ExtResource("3_4wgwo")
+font_size = 68
+font_color = Color(0, 0.50980395, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_aj6a1"]
+font = ExtResource("3_4wgwo")
+font_size = 25
+font_color = Color(0, 0.50980395, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4w17f"]
+font = ExtResource("3_4wgwo")
+font_size = 23
+font_color = Color(0, 0.50980395, 1, 1)
+
+[node name="GameInfo" type="Control" unique_id=533036839]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k0n1q")
+
+[node name="Screenshot20260330At153042CyberIntrusionFreeGuiPixelArtPackCraftPix_net" type="Sprite2D" parent="." unique_id=1902657924]
+position = Vector2(640, 359.99997)
+scale = Vector2(1.4918414, 1.4723926)
+texture = ExtResource("2_c22pe")
+
+[node name="Label" type="Label" parent="." unique_id=596358855]
+layout_mode = 0
+offset_left = 639.0
+offset_top = 23.0
+offset_right = 1054.0
+offset_bottom = 71.0
+text = "Loading Data ..."
+label_settings = SubResource("LabelSettings_xylsv")
+
+[node name="Label2" type="Label" parent="." unique_id=1337393108]
+layout_mode = 0
+offset_left = 237.0
+offset_top = 642.0
+offset_right = 1055.0
+offset_bottom = 669.0
+text = "Use WASD to move the character on the left screen"
+label_settings = SubResource("LabelSettings_aj6a1")
+
+[node name="Sr5z22418e5422Aws3" type="Sprite2D" parent="." unique_id=1698286701]
+position = Vector2(685.99994, 479)
+scale = Vector2(2.421875, 2.859375)
+texture = ExtResource("4_nfqhb")
+
+[node name="Wasd" type="Sprite2D" parent="." unique_id=34630385]
+position = Vector2(273, 501)
+texture = ExtResource("5_5axfm")
+
+[node name="ColorRect" type="ColorRect" parent="Wasd" unique_id=846428875]
+offset_left = -163.0
+offset_top = -109.0
+offset_right = -48.0
+offset_bottom = 10.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Wasd/ColorRect" unique_id=869658472]
+layout_mode = 0
+offset_left = 211.0
+offset_top = -1.0
+offset_right = 326.0
+offset_bottom = 118.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Wasd/ColorRect" unique_id=315263811]
+layout_mode = 0
+offset_left = -163.0
+offset_top = -109.0
+offset_right = -48.0
+offset_bottom = 10.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Wasd/ColorRect/ColorRect2" unique_id=2133675393]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 215.0
+offset_right = 279.0
+offset_bottom = 334.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Wasd/ColorRect/ColorRect2/ColorRect" unique_id=49305042]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 11.526672
+offset_right = 21.053345
+offset_bottom = 146.8532
+rotation = -1.5707964
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Wasd/ColorRect/ColorRect2/ColorRect" unique_id=1228858003]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 1.0
+offset_right = 130.0
+offset_bottom = 120.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Wasd/ColorRect/ColorRect2/ColorRect/ColorRect2" unique_id=1329723692]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 11.526672
+offset_right = 21.053345
+offset_bottom = 146.8532
+rotation = -1.5707964
+color = Color(0, 0, 0, 1)
+
+[node name="EnergyBar1" type="Sprite2D" parent="." unique_id=49356500]
+position = Vector2(580, 430)
+texture = ExtResource("6_banmd")
+
+[node name="EnergyBar2" type="Sprite2D" parent="." unique_id=724682647]
+position = Vector2(583, 464)
+texture = ExtResource("6_banmd")
+
+[node name="EnergyBar3" type="Sprite2D" parent="." unique_id=663853876]
+position = Vector2(558, 447)
+texture = ExtResource("6_banmd")
+
+[node name="EnergyBar5" type="Sprite2D" parent="." unique_id=1289417485]
+position = Vector2(594, 513)
+texture = ExtResource("6_banmd")
+
+[node name="EnergyBar6" type="Sprite2D" parent="." unique_id=1018998188]
+position = Vector2(579, 527)
+texture = ExtResource("6_banmd")
+
+[node name="EnergyBar7" type="Sprite2D" parent="." unique_id=1145426453]
+position = Vector2(584, 481)
+texture = ExtResource("6_banmd")
+
+[node name="EnergyBar8" type="Sprite2D" parent="." unique_id=1565937594]
+position = Vector2(565, 513)
+texture = ExtResource("6_banmd")
+
+[node name="EnergyBar9" type="Sprite2D" parent="." unique_id=1833626477]
+position = Vector2(559, 492)
+texture = ExtResource("6_banmd")
+
+[node name="EnergyBar10" type="Sprite2D" parent="." unique_id=414040256]
+position = Vector2(549, 469)
+texture = ExtResource("6_banmd")
+
+[node name="EnergyBar11" type="Sprite2D" parent="." unique_id=78337362]
+position = Vector2(633, 403)
+texture = ExtResource("6_banmd")
+
+[node name="EnergyBar12" type="Sprite2D" parent="." unique_id=1160800578]
+position = Vector2(614, 420)
+texture = ExtResource("6_banmd")
+
+[node name="EnergyBar13" type="Sprite2D" parent="." unique_id=1808764676]
+position = Vector2(601, 446)
+texture = ExtResource("6_banmd")
+
+[node name="EnergyBar14" type="Sprite2D" parent="." unique_id=1807339650]
+position = Vector2(629, 554)
+texture = ExtResource("6_banmd")
+
+[node name="EnergyBar15" type="Sprite2D" parent="." unique_id=1355838881]
+position = Vector2(600, 542)
+texture = ExtResource("6_banmd")
+
+[node name="EnergyBar16" type="Sprite2D" parent="." unique_id=1751918235]
+position = Vector2(613, 524)
+texture = ExtResource("6_banmd")
+
+[node name="Button" type="Button" parent="." unique_id=540161186]
+layout_mode = 0
+offset_left = 1107.0
+offset_top = 608.0
+offset_right = 1269.0
+offset_bottom = 703.0
+
+[node name="Label3" type="Label" parent="." unique_id=1678338874]
+layout_mode = 0
+offset_left = 1119.0
+offset_top = 635.0
+offset_right = 1260.0
+offset_bottom = 660.0
+text = "Next Rule
+      ->"
+label_settings = SubResource("LabelSettings_4w17f")
