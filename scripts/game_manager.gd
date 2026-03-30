@@ -1,7 +1,8 @@
 extends Node2D
 
 # How many seconds the second player has to respond
-const SYNC_TIMEOUT := 5.0
+const SYNC_TIMEOUT := 10.0
+const TIMER_SFX = preload("res://game music/TimerSound.mp3")
 
 # Tracks a pending (un-synced) button press: color -> {player_id, button_node}
 var pending: Dictionary = {}
@@ -21,6 +22,10 @@ var door_done: Dictionary = {1: false, 2: false}
 
 func _ready() -> void:
 	add_to_group("game_manager")
+	countdown_sound.stream = TIMER_SFX
+	countdown_sound.bus = "Master"
+	countdown_sound.pitch_scale = _timer_pitch_scale()
+
 	var _music := AudioStreamPlayer.new()
 	_music.stream = load("res://game music/tech2.mp3")
 	_music.stream.loop = true
@@ -34,6 +39,15 @@ func _ready() -> void:
 	# Connect after one frame so all SubViewport children are ready
 	await get_tree().process_frame
 	_connect_puzzle_signals()
+
+func _timer_pitch_scale() -> float:
+	if countdown_sound == null or countdown_sound.stream == null:
+		return 1.0
+	var length := countdown_sound.stream.get_length()
+	if length <= 0.0:
+		return 1.0
+	# Make one playback pass line up with the active countdown duration.
+	return length / SYNC_TIMEOUT
 
 func _connect_puzzle_signals() -> void:
 	var puzzle1 = get_node_or_null("LeftContainer/LeftViewport/LevelPuzzle1")
@@ -70,8 +84,10 @@ func _sync_color(color: String, _btn1: Node, _btn2: Node) -> void:
 		_unlock_all_doors()
 
 func _start_timer(color: String, initiator_id: int) -> void:
+	var had_active_timer := (not timer_red.is_stopped()) or (not timer_blue.is_stopped())
 	var other_id = 3 - initiator_id  # 1↔2
-	var label_text = "P%d: press %s in 5s!" % [other_id, color.to_upper()]
+	var timeout_s := int(SYNC_TIMEOUT)
+	var label_text = "P%d: press %s in %ds!" % [other_id, color.to_upper(), timeout_s]
 	if color == "red":
 		countdown_label_red.text = label_text
 		countdown_label_red.visible = true
@@ -80,7 +96,11 @@ func _start_timer(color: String, initiator_id: int) -> void:
 		countdown_label_blue.text = label_text
 		countdown_label_blue.visible = true
 		timer_blue.start(SYNC_TIMEOUT)
-	countdown_sound.play()
+
+	if not had_active_timer:
+		countdown_sound.pitch_scale = _timer_pitch_scale()
+		countdown_sound.seek(0.0)
+		countdown_sound.play()
 
 func _stop_timer(color: String) -> void:
 	if color == "red":

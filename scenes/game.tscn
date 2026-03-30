@@ -536,11 +536,11 @@ label_settings = SubResource("Sub_label_complete")
 horizontal_alignment = 1
 
 [node name="TimerRed" type="Timer" parent="UI" unique_id=2095597513]
-wait_time = 5.0
+wait_time = 10.0
 one_shot = true
 
 [node name="TimerBlue" type="Timer" parent="UI" unique_id=857163]
-wait_time = 5.0
+wait_time = 10.0
 one_shot = true
 
 [node name="CountdownSound" type="AudioStreamPlayer" parent="UI" unique_id=2100862321]
