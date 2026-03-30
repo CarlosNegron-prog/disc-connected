@@ -8,6 +8,13 @@
 [ext_resource type="Script" uid="uid://ddibrqws45v06" path="res://scripts/game_manager.gd" id="6_gmscript"]
 [ext_resource type="Script" uid="uid://d0gjn51ybi8fp" path="res://scripts/level_puzzle.gd" id="7_lpscript"]
 [ext_resource type="Script" uid="uid://cqy6gdqcdk3ac" path="res://scripts/interactable.gd" id="8_intscript"]
+[ext_resource type="Script" path="res://scripts/player_1.gd" id="2_p1script"]
+[ext_resource type="Script" uid="uid://bab28wxyr3blf" path="res://scripts/player_2.gd" id="3_p2script"]
+[ext_resource type="Script" uid="uid://b6mibi4sbrrx5" path="res://scripts/switch.gd" id="4_swscript"]
+[ext_resource type="Script" path="res://scripts/exit_door.gd" id="5_doorscript"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="6_gmscript"]
+[ext_resource type="Script" uid="uid://d0gjn51ybi8fp" path="res://scripts/level_puzzle.gd" id="7_lpscript"]
+[ext_resource type="Script" path="res://scripts/interactable.gd" id="8_intscript"]
 [ext_resource type="Texture2D" uid="uid://duf30i5usucv2" path="res://map2/objects/digicode.png" id="9_digi"]
 [ext_resource type="Texture2D" uid="uid://dk3d6dno766pw" path="res://map/switch2/switch0.png" id="11_sw0"]
 [ext_resource type="Texture2D" uid="uid://mvjvugi85o0m" path="res://map2/door/door_closed.png" id="14_door"]
@@ -84,6 +91,8 @@ script = ExtResource("6_gmscript")
 [node name="LeftContainer" type="SubViewportContainer" parent="." unique_id=891541304]
 offset_right = 240.0
 offset_bottom = 270.0
+stretch = true
+texture_filter = 1
 
 [node name="LeftViewport" type="SubViewport" parent="LeftContainer" unique_id=1864534392]
 handle_input_locally = false
@@ -182,6 +191,8 @@ shape = SubResource("Sub_wall_h")
 offset_left = 240.0
 offset_right = 480.0
 offset_bottom = 270.0
+stretch = true
+texture_filter = 1
 
 [node name="RightViewport" type="SubViewport" parent="RightContainer" unique_id=1442628685]
 handle_input_locally = false
@@ -198,6 +209,11 @@ position_smoothing_enabled = true
 position_smoothing_speed = 9.0
 
 [node name="RedButton2" type="StaticBody2D" parent="RightContainer/RightViewport" unique_id=1166819642]
+[node name="InteractingComponent" parent="RightContainer/RightViewport/Player2"]
+# InteractingComponent is defined in player1.tscn (instanced above); override interact action for player 2
+interact_action = "player2_interact"
+
+[node name="RedButton2" type="StaticBody2D" parent="RightContainer/RightViewport"]
 position = Vector2(60, 80)
 script = ExtResource("4_swscript")
 player_id = 2
