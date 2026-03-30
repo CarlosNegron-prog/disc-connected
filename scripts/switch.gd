@@ -7,6 +7,12 @@ extends StaticBody2D
 # "digicode" uses texture swap; "switch_anim" animates through 3 frames
 @export var button_type: String = "digicode"
 
+const DIGICODE_ON := preload("res://map2/objects/digicode.png")
+const DIGICODE_OFF := preload("res://map2/objects/digicode_disabled.png")
+const SWITCH0 := preload("res://map/switch2/switch0.png")
+const SWITCH1 := preload("res://map/switch2/switch1.png")
+const SWITCH2 := preload("res://map/switch2/switch2.png")
+
 var is_pressed := false
 
 @onready var interactable: Area2D = $interactable
@@ -26,23 +32,23 @@ func _on_interact() -> void:
 func _update_visuals() -> void:
 	if button_type == "digicode":
 		var sprite: Sprite2D = $Digicode
-		sprite.texture = load("res://map2/objects/digicode_disabled.png")
+		sprite.texture = DIGICODE_ON
 	elif button_type == "switch_anim":
 		_animate_switch()
 
 func _animate_switch() -> void:
 	var sprite: Sprite2D = $SwitchSprite
-	sprite.texture = load("res://map/switch2/switch1.png")
+	sprite.texture = SWITCH1
 	await get_tree().create_timer(0.2).timeout
-	sprite.texture = load("res://map/switch2/switch2.png")
+	sprite.texture = SWITCH2
 
 func reset_button() -> void:
 	is_pressed = false
 	interactable.is_interactable = true
 	if button_type == "digicode":
-		$Digicode.texture = load("res://map2/objects/digicode.png")
+		$Digicode.texture = DIGICODE_OFF
 	elif button_type == "switch_anim":
-		$SwitchSprite.texture = load("res://map/switch2/switch0.png")
+		$SwitchSprite.texture = SWITCH0
 
 func _notify_puzzle() -> void:
 	var group_name = "level_puzzle_" + str(player_id)

@@ -5,6 +5,11 @@ extends Node2D
 var current_interactions:= []
 var can_interact := true
 
+func _get_key_icon() -> String:
+	if interact_action == "player2_interact":
+		return "[Enter]"
+	return "[E]"
+
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed(interact_action) and can_interact:
 		if current_interactions:
@@ -22,7 +27,7 @@ func _process(_delta: float) -> void:
 	if current_interactions and can_interact:
 		current_interactions.sort_custom(_sort_by_nearest)
 		if current_interactions[0].is_interactable:
-			interact_label.text = current_interactions[0].interact_name
+			interact_label.text = _get_key_icon() + " " + current_interactions[0].interact_name
 			interact_label.show()
 	else:
 		interact_label.hide()
