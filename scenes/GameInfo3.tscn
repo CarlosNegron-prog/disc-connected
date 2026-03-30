@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cre2s12ectnmk" path="res://Intro Elements/9 Other/Screenshot 2026-03-30 at 15-30-42 Cyber Intrusion Free GUI Pixel Art Pack - CraftPix.net.png" id="2_82uf1"]
 [ext_resource type="FontFile" uid="uid://cjh8sy4fnc1gf" path="res://Intro Elements/10 Font/CyberpunkCraftpixPixel.otf" id="3_1mmfw"]
 [ext_resource type="Texture2D" uid="uid://n23wjiyigy75" path="res://Intro Elements/9 Other/Screenshot 2026-03-30 at 15-34-48 Cyber Intrusion Free GUI Pixel Art Pack - CraftPix.net.png" id="4_h8fuw"]
-[ext_resource type="Texture2D" path="res://Charactersbynat/sr5z6171426b69aws3.png" id="5_r4set"]
+[ext_resource type="Texture2D" uid="uid://d2haf154rq0f0" path="res://Charactersbynat/Triangle.png" id="6_82uf1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_f44q0"]
 font = ExtResource("3_1mmfw")
@@ -187,7 +187,7 @@ offset_bottom = 139.75291
 rotation = -1.5707964
 color = Color(0, 0, 0, 1)
 
-[node name="Sr5z6171426b69Aws3" type="Sprite2D" parent="." unique_id=78580664]
-position = Vector2(673, 470.99997)
-scale = Vector2(2.875, 2.859375)
-texture = ExtResource("5_r4set")
+[node name="Triangle" type="Sprite2D" parent="." unique_id=463466306]
+position = Vector2(678, 474)
+scale = Vector2(2.890625, 2.890625)
+texture = ExtResource("6_82uf1")
