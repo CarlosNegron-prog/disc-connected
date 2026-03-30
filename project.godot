@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Disc - Connected"
-run/main_scene="uid://sy7s5373yn2l"
+run/main_scene="uid://dp1k7ad2mn1nv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
