@@ -1,17 +1,21 @@
 extends Node2D
+
+@export var interact_action: String = "player1_interact"
 @onready var interact_label: Label = $InteractRange/InteractLabel
 var current_interactions:= []
 var can_interact := true
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("Interact") and can_interact:
+	if event.is_action_pressed(interact_action) and can_interact:
 		if current_interactions:
 			can_interact = false
 			interact_label.hide()
-			
+
 			await current_interactions[0].interact.call()
-			
-			
+
+			can_interact = true
+
+
 			
 
 func _process(_delta: float) -> void:
