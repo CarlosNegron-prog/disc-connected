@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://qhd6qshrb3e" path="res://scripts/enemy_triangle.gd" id="1_cjt2j"]
 [ext_resource type="Texture2D" uid="uid://b26bk0377bpqe" path="res://sprites/slime_green.png" id="1_qpht1"]
-[ext_resource type="PackedScene" uid="uid://7omxv7xq2wyk" path="res://scenes/kill_zone.tscn" id="3_5drax"]
+[ext_resource type="PackedScene" path="res://scenes/kill_zone.tscn" id="3_5drax"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kg0fb"]
 atlas = ExtResource("1_qpht1")
@@ -47,7 +47,7 @@ size = Vector2(12, 12)
 size = Vector2(10, 10)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cjt2j"]
-radius = 98.12747
+radius = 131.06105
 
 [node name="EnemyT" type="Node2D" unique_id=1218782301]
 

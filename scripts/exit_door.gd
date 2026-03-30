@@ -2,8 +2,9 @@ extends StaticBody2D
 
 # Which player's map this door belongs to (1 or 2)
 @export var player_id: int = 1
-
+var door_used := false
 var is_unlocked := false
+
 
 @onready var interactable: Area2D = $interactable
 @onready var door_sprite: Sprite2D = $DoorSprite
@@ -27,3 +28,9 @@ func _on_interact() -> void:
 	var managers = get_tree().get_nodes_in_group("game_manager")
 	if managers.size() > 0:
 		managers[0].on_door_interacted(player_id)
+		
+func on_door_interacted(_p_id: int) -> void:
+	if door_used:
+		return
+	door_used = true
+	get_tree().change_scene_to_file("res://scenes/GameIntro.tscn")

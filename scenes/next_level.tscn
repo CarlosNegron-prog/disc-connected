@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://cnxtlvl2plyr1"]
 
+[ext_resource type="Script" uid="uid://cjl2gr50mqshe" path="res://scenes/next_level.gd" id="1_o3ii7"]
 [ext_resource type="PackedScene" uid="uid://b2tghi52rh2ej" path="res://scenes/player1.tscn" id="1_p1scene"]
-[ext_resource type="Script" path="res://scripts/next_level_player.gd" id="2_nlscript"]
-[ext_resource type="PackedScene" uid="uid://7omxv7xq2wyk" path="res://scenes/kill_zone.tscn" id="3_killzone"]
-
-[sub_resource type="RectangleShape2D" id="Sub_player_col"]
-size = Vector2(10, 10)
+[ext_resource type="Script" uid="uid://u0gw1drhbv1y" path="res://scripts/next_level_player.gd" id="2_nlscript"]
+[ext_resource type="PackedScene" path="res://scenes/kill_zone.tscn" id="3_killzone"]
+[ext_resource type="PackedScene" uid="uid://ceaskk3wsxm7q" path="res://scenes/levelend.tscn" id="4_wlp6t"]
+[ext_resource type="Texture2D" uid="uid://bwxkymqo50vxv" path="res://map/chest/chest0_enabled.png" id="6_8rh8h"]
+[ext_resource type="Script" uid="uid://cqy6gdqcdk3ac" path="res://scripts/interactable.gd" id="7_twfgh"]
+[ext_resource type="Script" uid="uid://biwqltvk2tc3j" path="res://scripts/exit_door.gd" id="8_bau2p"]
+[ext_resource type="Texture2D" uid="uid://dcw4heveae41f" path="res://map/door/door1_bis.png" id="9_8rh8h"]
 
 [sub_resource type="RectangleShape2D" id="Sub_kz1"]
 size = Vector2(480, 20)
@@ -15,45 +18,102 @@ size = Vector2(480, 20)
 
 [sub_resource type="LabelSettings" id="Sub_hint_label"]
 font_size = 10
-font_color = Color(1, 1, 1, 1)
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
-[node name="NextLevel" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_i5w1s"]
+radius = 18.027756
 
-[node name="Player" parent="." instance=ExtResource("1_p1scene")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wjqms"]
+size = Vector2(24, 18)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_twfgh"]
+radius = 16.124516
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bau2p"]
+size = Vector2(34, 14)
+
+[node name="NextLevel" type="Node2D" unique_id=1076299700]
+script = ExtResource("1_o3ii7")
+
+[node name="Player" parent="." unique_id=1265699873 instance=ExtResource("1_p1scene")]
+z_index = 100
+z_as_relative = false
 position = Vector2(240, 135)
 script = ExtResource("2_nlscript")
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=2083301081]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 9.0
 
-[node name="KillZone1" parent="." instance=ExtResource("3_killzone")]
-position = Vector2(240, 30)
+[node name="KillZone1" parent="." unique_id=1909486067 instance=ExtResource("3_killzone")]
+position = Vector2(-370, 374)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone1" unique_id=1924750783]
 shape = SubResource("Sub_kz1")
 
-[node name="KillZone2" parent="." instance=ExtResource("3_killzone")]
+[node name="KillZone2" parent="." unique_id=1004368674 instance=ExtResource("3_killzone")]
 position = Vector2(240, 240)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone2" unique_id=1916408708]
+position = Vector2(-592, 196)
 shape = SubResource("Sub_kz2")
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="." unique_id=1754754522]
 
-[node name="HintLabel" type="Label" parent="UI"]
-anchors_preset = 8
+[node name="HintLabel" type="Label" parent="UI" unique_id=1484468764]
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.0
 anchor_right = 0.5
-anchor_bottom = 0.0
 offset_left = -180.0
 offset_top = 5.0
 offset_right = 180.0
 offset_bottom = 20.0
-text = "W/D = left/right   Up/Down = up/down   Find the chest, then reach the door!"
+grow_horizontal = 2
+text = "W/D = left/right   Up/Down = up/down   Find the chest , then reach the door!"
 label_settings = SubResource("Sub_hint_label")
 horizontal_alignment = 1
+
+[node name="levelend" parent="." unique_id=1100076902 instance=ExtResource("4_wlp6t")]
+position = Vector2(-78, -43)
+
+[node name="Chest" type="StaticBody2D" parent="." unique_id=2047420562]
+z_index = 6
+position = Vector2(1283, 518)
+rotation = -1.5707964
+
+[node name="ChestSprite" type="Sprite2D" parent="Chest" unique_id=2033333103]
+texture = ExtResource("6_8rh8h")
+
+[node name="interactable" type="Area2D" parent="Chest" unique_id=186472970]
+script = ExtResource("7_twfgh")
+
+[node name="interactionDist" type="CollisionShape2D" parent="Chest/interactable" unique_id=1171287138]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_i5w1s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chest" unique_id=496269023]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_wjqms")
+
+[node name="ExitDoor" type="StaticBody2D" parent="." unique_id=1770272821]
+z_index = 1
+z_as_relative = false
+position = Vector2(-60, 1014)
+rotation = 1.5707964
+script = ExtResource("8_bau2p")
+
+[node name="DoorSprite" type="Sprite2D" parent="ExitDoor" unique_id=703612397]
+texture = ExtResource("9_8rh8h")
+flip_v = true
+
+[node name="interactable" type="Area2D" parent="ExitDoor" unique_id=987116283]
+script = ExtResource("7_twfgh")
+
+[node name="interactDist" type="CollisionShape2D" parent="ExitDoor/interactable" unique_id=1561214035]
+shape = SubResource("CircleShape2D_twfgh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor" unique_id=649704707]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_bau2p")
