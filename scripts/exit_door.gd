@@ -18,8 +18,6 @@ func unlock() -> void:
 	is_unlocked = true
 	interactable.is_interactable = true
 	interactable.interact_name = "Exit — interact to leave!"
-	# Tint door green to show it is open
-	door_sprite.modulate = Color(0.2, 1.0, 0.2)
 
 func _on_interact() -> void:
 	if not is_unlocked:
