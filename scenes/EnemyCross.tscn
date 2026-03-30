@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://byu7wlgb53fvv"]
+
+[ext_resource type="Texture2D" uid="uid://w0fvydfcn5wc" path="res://sprites/slime_purple.png" id="1_ch6q1"]
+[ext_resource type="PackedScene" uid="uid://7omxv7xq2wyk" path="res://scenes/kill_zone.tscn" id="2_omeon"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3t72t"]
+atlas = ExtResource("1_ch6q1")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ng2g"]
+atlas = ExtResource("1_ch6q1")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epe80"]
+atlas = ExtResource("1_ch6q1")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3fyq"]
+atlas = ExtResource("1_ch6q1")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_reaya"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3t72t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ng2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epe80")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3fyq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1r0a4"]
+size = Vector2(12, 13)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pyuos"]
+radius = 98.12747
+
+[node name="EnemyCross1" type="Node2D" unique_id=84804245]
+
+[node name="Cross" type="CharacterBody2D" parent="." unique_id=1344234696]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Cross" unique_id=22784857]
+sprite_frames = SubResource("SpriteFrames_reaya")
+autoplay = "default"
+
+[node name="Hitbox" parent="Cross" unique_id=1534225847 instance=ExtResource("2_omeon")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cross/Hitbox" unique_id=71920400]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_1r0a4")
+
+[node name="Timer2" type="Timer" parent="Cross/Hitbox" unique_id=1581077422]
+one_shot = true
+
+[node name="DetectionZone" type="Area2D" parent="Cross" unique_id=220474685]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cross/DetectionZone" unique_id=1185298749]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_pyuos")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cross" unique_id=1306098476]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_1r0a4")
+
+[connection signal="timeout" from="Cross/Hitbox/Timer2" to="Cross/Hitbox" method="_on_timer_2_timeout"]
+[connection signal="body_entered" from="Cross/DetectionZone" to="Cross/Hitbox" method="_on_detection_zone_body_entered"]
+[connection signal="body_exited" from="Cross/DetectionZone" to="Cross/Hitbox" method="_on_detection_zone_body_exited"]

@@ -1,22 +1,17 @@
 [gd_scene format=3 uid="uid://sy7s5373yn2l"]
 
 [ext_resource type="PackedScene" uid="uid://b2tghi52rh2ej" path="res://scenes/player1.tscn" id="1_p1scene"]
+[ext_resource type="PackedScene" uid="uid://dgfees3hv5wg" path="res://scenes/level_end.tscn" id="2_dinhu"]
 [ext_resource type="Script" uid="uid://b2blie1kss3ov" path="res://scripts/player_1.gd" id="2_p1script"]
 [ext_resource type="Script" uid="uid://bab28wxyr3blf" path="res://scripts/player_2.gd" id="3_p2script"]
-[ext_resource type="Script" uid="uid://b6mibi4sbrrx5" path="res://scripts/switch.gd" id="4_swscript"]
-[ext_resource type="Script" uid="uid://dtugi4pnj4lns" path="res://scripts/exit_door.gd" id="5_doorscript"]
+[ext_resource type="Script" uid="uid://sja5651hgbwq" path="res://scripts/switch.gd" id="4_swscript"]
+[ext_resource type="Script" uid="uid://biwqltvk2tc3j" path="res://scripts/exit_door.gd" id="5_doorscript"]
 [ext_resource type="Script" uid="uid://ddibrqws45v06" path="res://scripts/game_manager.gd" id="6_gmscript"]
 [ext_resource type="Script" uid="uid://d0gjn51ybi8fp" path="res://scripts/level_puzzle.gd" id="7_lpscript"]
 [ext_resource type="Script" uid="uid://cqy6gdqcdk3ac" path="res://scripts/interactable.gd" id="8_intscript"]
-[ext_resource type="Script" path="res://scripts/player_1.gd" id="2_p1script"]
-[ext_resource type="Script" uid="uid://bab28wxyr3blf" path="res://scripts/player_2.gd" id="3_p2script"]
-[ext_resource type="Script" uid="uid://b6mibi4sbrrx5" path="res://scripts/switch.gd" id="4_swscript"]
-[ext_resource type="Script" path="res://scripts/exit_door.gd" id="5_doorscript"]
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="6_gmscript"]
-[ext_resource type="Script" uid="uid://d0gjn51ybi8fp" path="res://scripts/level_puzzle.gd" id="7_lpscript"]
-[ext_resource type="Script" path="res://scripts/interactable.gd" id="8_intscript"]
 [ext_resource type="Texture2D" uid="uid://duf30i5usucv2" path="res://map2/objects/digicode.png" id="9_digi"]
 [ext_resource type="Texture2D" uid="uid://dk3d6dno766pw" path="res://map/switch2/switch0.png" id="11_sw0"]
+[ext_resource type="PackedScene" uid="uid://donbfrr61bx7" path="res://scenes/EnemyT.tscn" id="12_kvuet"]
 [ext_resource type="Texture2D" uid="uid://mvjvugi85o0m" path="res://map2/door/door_closed.png" id="14_door"]
 
 [sub_resource type="RectangleShape2D" id="Sub_btn1_phys"]
@@ -26,7 +21,7 @@ size = Vector2(8, 10)
 radius = 11.0
 
 [sub_resource type="RectangleShape2D" id="Sub_btn2_phys"]
-size = Vector2(8, 10)
+size = Vector2(10, 4)
 
 [sub_resource type="CircleShape2D" id="Sub_btn2_interact"]
 radius = 11.0
@@ -38,10 +33,43 @@ size = Vector2(14, 16)
 radius = 14.0
 
 [sub_resource type="RectangleShape2D" id="Sub_wall_h"]
-size = Vector2(240, 10)
+size = Vector2(1122.5, 16.5)
 
 [sub_resource type="RectangleShape2D" id="Sub_wall_v"]
-size = Vector2(10, 270)
+size = Vector2(7, 1132)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pl11u"]
+size = Vector2(471, 196.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhx41"]
+size = Vector2(436, 314)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnb83"]
+size = Vector2(118, 161)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sww3w"]
+size = Vector2(239, 249)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_suyxu"]
+size = Vector2(38, 440)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgl2t"]
+size = Vector2(394, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qouja"]
+size = Vector2(28.25, 156.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wljb1"]
+size = Vector2(294, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2yb1"]
+size = Vector2(65, 164.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_js0lu"]
+size = Vector2(148.5, 148)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxtfn"]
+size = Vector2(109, 309)
 
 [sub_resource type="RectangleShape2D" id="Sub_btn3_phys"]
 size = Vector2(8, 10)
@@ -62,10 +90,49 @@ size = Vector2(14, 16)
 radius = 14.0
 
 [sub_resource type="RectangleShape2D" id="Sub_wall_h2"]
-size = Vector2(240, 10)
+size = Vector2(1101, 20.6875)
 
 [sub_resource type="RectangleShape2D" id="Sub_wall_v2"]
-size = Vector2(10, 270)
+size = Vector2(27, 1131)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dinhu"]
+size = Vector2(158, 199.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvuet"]
+size = Vector2(105, 280.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trtic"]
+size = Vector2(198, 85)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ir15t"]
+size = Vector2(520, 83)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ca42v"]
+size = Vector2(165, 151)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rysoc"]
+size = Vector2(46, 111.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssvqc"]
+size = Vector2(333, 310)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_264po"]
+size = Vector2(144.375, 177.875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1kice"]
+size = Vector2(188.5, 148)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5newe"]
+size = Vector2(137, 98)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37s47"]
+size = Vector2(63, 215)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bt5mj"]
+size = Vector2(274, 97)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1j6l"]
+size = Vector2(149.5, 121)
 
 [sub_resource type="LabelSettings" id="Sub_label_red"]
 font_size = 10
@@ -85,226 +152,354 @@ font_color = Color(0.2, 1, 0.2, 1)
 outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 
-[node name="Game" type="Node2D" unique_id=483158226]
+[node name="Game" type="Node2D" unique_id=1098071039]
 script = ExtResource("6_gmscript")
 
-[node name="LeftContainer" type="SubViewportContainer" parent="." unique_id=891541304]
-offset_right = 240.0
-offset_bottom = 270.0
-stretch = true
-texture_filter = 1
-
-[node name="LeftViewport" type="SubViewport" parent="LeftContainer" unique_id=1864534392]
-handle_input_locally = false
-size = Vector2i(240, 270)
-render_target_update_mode = 4
-
-[node name="Player1" parent="LeftContainer/LeftViewport" unique_id=67432732 instance=ExtResource("1_p1scene")]
-position = Vector2(120, 135)
-script = ExtResource("2_p1script")
-
-[node name="Camera2D" type="Camera2D" parent="LeftContainer/LeftViewport/Player1" unique_id=614217807]
-zoom = Vector2(2, 2)
-position_smoothing_enabled = true
-position_smoothing_speed = 9.0
-
-[node name="RedButton1" type="StaticBody2D" parent="LeftContainer/LeftViewport" unique_id=2106627985]
-position = Vector2(60, 80)
-script = ExtResource("4_swscript")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftContainer/LeftViewport/RedButton1" unique_id=1370909179]
-shape = SubResource("Sub_btn1_phys")
-
-[node name="Digicode" type="Sprite2D" parent="LeftContainer/LeftViewport/RedButton1" unique_id=334585059]
-modulate = Color(1, 0.4, 0.4, 1)
-texture = ExtResource("9_digi")
-
-[node name="interactable" type="Area2D" parent="LeftContainer/LeftViewport/RedButton1" unique_id=542847615]
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("8_intscript")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftContainer/LeftViewport/RedButton1/interactable" unique_id=922145073]
-shape = SubResource("Sub_btn1_interact")
-
-[node name="BlueButton1" type="StaticBody2D" parent="LeftContainer/LeftViewport" unique_id=1322002707]
-position = Vector2(180, 80)
-script = ExtResource("4_swscript")
-button_color = "blue"
-button_type = "switch_anim"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftContainer/LeftViewport/BlueButton1" unique_id=365469745]
-shape = SubResource("Sub_btn2_phys")
-
-[node name="SwitchSprite" type="Sprite2D" parent="LeftContainer/LeftViewport/BlueButton1" unique_id=1697758081]
-modulate = Color(0.4, 0.6, 1, 1)
-texture = ExtResource("11_sw0")
-
-[node name="interactable" type="Area2D" parent="LeftContainer/LeftViewport/BlueButton1" unique_id=845202180]
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("8_intscript")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftContainer/LeftViewport/BlueButton1/interactable" unique_id=257746442]
-shape = SubResource("Sub_btn2_interact")
-
-[node name="ExitDoor1" type="StaticBody2D" parent="LeftContainer/LeftViewport" unique_id=329396454]
-position = Vector2(120, 200)
-script = ExtResource("5_doorscript")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftContainer/LeftViewport/ExitDoor1" unique_id=1862082453]
-shape = SubResource("Sub_door1_phys")
-
-[node name="DoorSprite" type="Sprite2D" parent="LeftContainer/LeftViewport/ExitDoor1" unique_id=486826508]
-texture = ExtResource("14_door")
-
-[node name="interactable" type="Area2D" parent="LeftContainer/LeftViewport/ExitDoor1" unique_id=1792939489]
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("8_intscript")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftContainer/LeftViewport/ExitDoor1/interactable" unique_id=900235048]
-shape = SubResource("Sub_door1_interact")
-
-[node name="LevelPuzzle1" type="Node" parent="LeftContainer/LeftViewport" unique_id=1049913407]
-script = ExtResource("7_lpscript")
-
-[node name="Walls1" type="StaticBody2D" parent="LeftContainer/LeftViewport" unique_id=2106903304]
-
-[node name="TopWall" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=576350592]
-position = Vector2(120, -5)
-shape = SubResource("Sub_wall_h")
-
-[node name="LeftWall" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=1643696782]
-position = Vector2(-5, 135)
-shape = SubResource("Sub_wall_v")
-
-[node name="RightWall" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=1642849260]
-position = Vector2(245, 135)
-shape = SubResource("Sub_wall_v")
-
-[node name="BottomWall" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=1526305422]
-position = Vector2(120, 275)
-shape = SubResource("Sub_wall_h")
-
-[node name="RightContainer" type="SubViewportContainer" parent="." unique_id=1795898137]
-offset_left = 240.0
-offset_right = 480.0
-offset_bottom = 270.0
-stretch = true
-texture_filter = 1
-
-[node name="RightViewport" type="SubViewport" parent="RightContainer" unique_id=1442628685]
-handle_input_locally = false
-size = Vector2i(240, 270)
-render_target_update_mode = 4
-
-[node name="Player2" parent="RightContainer/RightViewport" unique_id=331692831 instance=ExtResource("1_p1scene")]
-position = Vector2(120, 135)
-script = ExtResource("3_p2script")
-
-[node name="Camera2D" type="Camera2D" parent="RightContainer/RightViewport/Player2" unique_id=1108621031]
-zoom = Vector2(2, 2)
-position_smoothing_enabled = true
-position_smoothing_speed = 9.0
-
-[node name="RedButton2" type="StaticBody2D" parent="RightContainer/RightViewport" unique_id=1166819642]
-[node name="InteractingComponent" parent="RightContainer/RightViewport/Player2"]
-# InteractingComponent is defined in player1.tscn (instanced above); override interact action for player 2
-interact_action = "player2_interact"
-
-[node name="RedButton2" type="StaticBody2D" parent="RightContainer/RightViewport"]
-position = Vector2(60, 80)
-script = ExtResource("4_swscript")
-player_id = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RightContainer/RightViewport/RedButton2" unique_id=283530727]
-shape = SubResource("Sub_btn3_phys")
-
-[node name="Digicode" type="Sprite2D" parent="RightContainer/RightViewport/RedButton2" unique_id=1346989881]
-modulate = Color(1, 0.4, 0.4, 1)
-texture = ExtResource("9_digi")
-
-[node name="interactable" type="Area2D" parent="RightContainer/RightViewport/RedButton2" unique_id=1509632724]
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("8_intscript")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RightContainer/RightViewport/RedButton2/interactable" unique_id=2144799875]
-shape = SubResource("Sub_btn3_interact")
-
-[node name="BlueButton2" type="StaticBody2D" parent="RightContainer/RightViewport" unique_id=25696641]
-position = Vector2(180, 80)
-script = ExtResource("4_swscript")
-player_id = 2
-button_color = "blue"
-button_type = "switch_anim"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RightContainer/RightViewport/BlueButton2" unique_id=1092776217]
-shape = SubResource("Sub_btn4_phys")
-
-[node name="SwitchSprite" type="Sprite2D" parent="RightContainer/RightViewport/BlueButton2" unique_id=502640707]
-modulate = Color(0.4, 0.6, 1, 1)
-texture = ExtResource("11_sw0")
-
-[node name="interactable" type="Area2D" parent="RightContainer/RightViewport/BlueButton2" unique_id=930243461]
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("8_intscript")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RightContainer/RightViewport/BlueButton2/interactable" unique_id=2126051365]
-shape = SubResource("Sub_btn4_interact")
-
-[node name="ExitDoor2" type="StaticBody2D" parent="RightContainer/RightViewport" unique_id=62556563]
-position = Vector2(120, 200)
-script = ExtResource("5_doorscript")
-player_id = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RightContainer/RightViewport/ExitDoor2" unique_id=1511491804]
-shape = SubResource("Sub_door2_phys")
-
-[node name="DoorSprite" type="Sprite2D" parent="RightContainer/RightViewport/ExitDoor2" unique_id=468701834]
-texture = ExtResource("14_door")
-
-[node name="interactable" type="Area2D" parent="RightContainer/RightViewport/ExitDoor2" unique_id=1671062126]
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("8_intscript")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RightContainer/RightViewport/ExitDoor2/interactable" unique_id=901328758]
-shape = SubResource("Sub_door2_interact")
-
-[node name="LevelPuzzle2" type="Node" parent="RightContainer/RightViewport" unique_id=669957953]
-script = ExtResource("7_lpscript")
-player_id = 2
-
-[node name="Walls2" type="StaticBody2D" parent="RightContainer/RightViewport" unique_id=1988949417]
-
-[node name="TopWall" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=767680535]
-position = Vector2(120, -5)
-shape = SubResource("Sub_wall_h2")
-
-[node name="LeftWall" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=872692175]
-position = Vector2(-5, 135)
-shape = SubResource("Sub_wall_v2")
-
-[node name="RightWall" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=356917429]
-position = Vector2(245, 135)
-shape = SubResource("Sub_wall_v2")
-
-[node name="BottomWall" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=719215805]
-position = Vector2(120, 275)
-shape = SubResource("Sub_wall_h2")
-
-[node name="Divider" type="ColorRect" parent="." unique_id=441804429]
-offset_left = 238.0
-offset_right = 242.0
-offset_bottom = 270.0
+[node name="Divider" type="ColorRect" parent="." unique_id=1861670246]
+offset_left = 639.0
+offset_right = 641.0
+offset_bottom = 720.0
 color = Color(0.9, 0.9, 0.9, 1)
 
-[node name="UI" type="CanvasLayer" parent="." unique_id=140395812]
+[node name="LeftContainer" type="SubViewportContainer" parent="." unique_id=1224502585]
+offset_right = 2222.0
+offset_bottom = 2222.0
 
-[node name="CountdownLabelRed" type="Label" parent="UI" unique_id=1786379659]
+[node name="LeftViewport" type="SubViewport" parent="LeftContainer" unique_id=976036302]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(640, 720)
+render_target_update_mode = 4
+
+[node name="Player1" parent="LeftContainer/LeftViewport" unique_id=906957143 instance=ExtResource("1_p1scene")]
+z_index = 100
+z_as_relative = false
+position = Vector2(281, 101)
+script = ExtResource("2_p1script")
+
+[node name="Camera2D" type="Camera2D" parent="LeftContainer/LeftViewport/Player1" unique_id=1433419040]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+position_smoothing_speed = 9.0
+
+[node name="RedButton1" type="StaticBody2D" parent="LeftContainer/LeftViewport" unique_id=1727043623]
+z_index = 2
+z_as_relative = false
+position = Vector2(1092, 1029)
+rotation = 1.5707964
+script = ExtResource("4_swscript")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftContainer/LeftViewport/RedButton1" unique_id=1727470952]
+shape = SubResource("Sub_btn1_phys")
+
+[node name="Digicode" type="Sprite2D" parent="LeftContainer/LeftViewport/RedButton1" unique_id=420375290]
+modulate = Color(1, 0.4, 0.4, 1)
+texture = ExtResource("9_digi")
+
+[node name="interactable" type="Area2D" parent="LeftContainer/LeftViewport/RedButton1" unique_id=915693573]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("8_intscript")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftContainer/LeftViewport/RedButton1/interactable" unique_id=2101178984]
+shape = SubResource("Sub_btn1_interact")
+
+[node name="BlueButton1" type="StaticBody2D" parent="LeftContainer/LeftViewport" unique_id=336712974]
+z_index = 3
+z_as_relative = false
+position = Vector2(809, 46)
+script = ExtResource("4_swscript")
+button_color = "blue"
+button_type = "switch_anim"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftContainer/LeftViewport/BlueButton1" unique_id=857260197]
+position = Vector2(1, 4)
+shape = SubResource("Sub_btn2_phys")
+
+[node name="SwitchSprite" type="Sprite2D" parent="LeftContainer/LeftViewport/BlueButton1" unique_id=1221082647]
+modulate = Color(0.4, 0.6, 1, 1)
+texture = ExtResource("11_sw0")
+
+[node name="interactable" type="Area2D" parent="LeftContainer/LeftViewport/BlueButton1" unique_id=1405083172]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("8_intscript")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftContainer/LeftViewport/BlueButton1/interactable" unique_id=2110281726]
+shape = SubResource("Sub_btn2_interact")
+
+[node name="ExitDoor1" type="StaticBody2D" parent="LeftContainer/LeftViewport" unique_id=994750278]
+z_index = 2
+z_as_relative = false
+position = Vector2(25, 1125)
+script = ExtResource("5_doorscript")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftContainer/LeftViewport/ExitDoor1" unique_id=595538491]
+shape = SubResource("Sub_door1_phys")
+
+[node name="DoorSprite" type="Sprite2D" parent="LeftContainer/LeftViewport/ExitDoor1" unique_id=1668936072]
+texture = ExtResource("14_door")
+flip_v = true
+
+[node name="interactable" type="Area2D" parent="LeftContainer/LeftViewport/ExitDoor1" unique_id=695585659]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("8_intscript")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftContainer/LeftViewport/ExitDoor1/interactable" unique_id=507616785]
+shape = SubResource("Sub_door1_interact")
+
+[node name="LevelPuzzle1" type="Node" parent="LeftContainer/LeftViewport" unique_id=619144545]
+script = ExtResource("7_lpscript")
+
+[node name="Walls1" type="StaticBody2D" parent="LeftContainer/LeftViewport" unique_id=667378601]
+position = Vector2(-14, 17)
+
+[node name="TopWall" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=31585400]
+position = Vector2(580.5, 0)
+shape = SubResource("Sub_wall_h")
+
+[node name="LeftWall" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=857780811]
+position = Vector2(12, 553)
+shape = SubResource("Sub_wall_v")
+
+[node name="RightWall" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=1689617001]
+position = Vector2(1107, 539.5)
+shape = SubResource("Sub_wall_v")
+
+[node name="BottomWall" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=804421550]
+position = Vector2(580.25, 1104.75)
+shape = SubResource("Sub_wall_h")
+
+[node name="redWall" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=1610662230]
+position = Vector2(622.5, 687.75)
+shape = SubResource("RectangleShape2D_pl11u")
+
+[node name="redWall2" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=1538029986]
+position = Vector2(646, 937)
+shape = SubResource("RectangleShape2D_bhx41")
+
+[node name="redWall3" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=790717126]
+position = Vector2(883, 793.5)
+shape = SubResource("RectangleShape2D_qnb83")
+
+[node name="redWall4" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=1950401317]
+position = Vector2(136.5, 125.5)
+shape = SubResource("RectangleShape2D_sww3w")
+
+[node name="blueWall" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=1720956546]
+position = Vector2(622, 225)
+shape = SubResource("RectangleShape2D_suyxu")
+
+[node name="blueWall2" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=173373293]
+position = Vector2(807, 394)
+shape = SubResource("RectangleShape2D_sgl2t")
+
+[node name="blueWall3" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=687325028]
+position = Vector2(642.875, 263.375)
+shape = SubResource("RectangleShape2D_qouja")
+
+[node name="blueWall4" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=1937800469]
+position = Vector2(765, 138)
+shape = SubResource("RectangleShape2D_wljb1")
+
+[node name="blueWall5" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=1131276682]
+position = Vector2(880.5, 154.125)
+shape = SubResource("RectangleShape2D_v2yb1")
+
+[node name="blueWall6" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=731310456]
+position = Vector2(100.75, 930)
+shape = SubResource("RectangleShape2D_js0lu")
+
+[node name="blueWall7" type="CollisionShape2D" parent="LeftContainer/LeftViewport/Walls1" unique_id=471557713]
+position = Vector2(73.5, 740.5)
+shape = SubResource("RectangleShape2D_gxtfn")
+
+[node name="Level2" parent="LeftContainer/LeftViewport" unique_id=1703235890 instance=ExtResource("2_dinhu")]
+z_index = 0
+position = Vector2(-23, 3)
+
+[node name="EnemyT" parent="LeftContainer/LeftViewport" unique_id=1218782301 instance=ExtResource("12_kvuet")]
+position = Vector2(222, 799)
+
+[node name="EnemyT2" parent="LeftContainer/LeftViewport" unique_id=1569502552 instance=ExtResource("12_kvuet")]
+position = Vector2(483, 469)
+
+[node name="RightContainer" type="SubViewportContainer" parent="." unique_id=1173478796]
+offset_left = 640.0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="RightViewport" type="SubViewport" parent="RightContainer" unique_id=444060879]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(640, 720)
+render_target_update_mode = 4
+
+[node name="Player2" parent="RightContainer/RightViewport" unique_id=503464294 instance=ExtResource("1_p1scene")]
+z_index = 100
+z_as_relative = false
+position = Vector2(89, 140)
+script = ExtResource("3_p2script")
+
+[node name="Camera2D" type="Camera2D" parent="RightContainer/RightViewport/Player2" unique_id=1130301936]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+position_smoothing_speed = 9.0
+
+[node name="RedButton2" type="StaticBody2D" parent="RightContainer/RightViewport" unique_id=1668016667]
+z_index = 2
+z_as_relative = false
+position = Vector2(1108, 177)
+rotation = 1.5707964
+script = ExtResource("4_swscript")
+player_id = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightContainer/RightViewport/RedButton2" unique_id=985410057]
+shape = SubResource("Sub_btn3_phys")
+
+[node name="Digicode" type="Sprite2D" parent="RightContainer/RightViewport/RedButton2" unique_id=1673315543]
+modulate = Color(1, 0.4, 0.4, 1)
+texture = ExtResource("9_digi")
+
+[node name="interactable" type="Area2D" parent="RightContainer/RightViewport/RedButton2" unique_id=995712735]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("8_intscript")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightContainer/RightViewport/RedButton2/interactable" unique_id=812206935]
+shape = SubResource("Sub_btn3_interact")
+
+[node name="BlueButton2" type="StaticBody2D" parent="RightContainer/RightViewport" unique_id=1604587535]
+z_index = 1
+z_as_relative = false
+position = Vector2(90, 1067)
+script = ExtResource("4_swscript")
+player_id = 2
+button_color = "blue"
+button_type = "switch_anim"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightContainer/RightViewport/BlueButton2" unique_id=1354354993]
+shape = SubResource("Sub_btn4_phys")
+
+[node name="SwitchSprite" type="Sprite2D" parent="RightContainer/RightViewport/BlueButton2" unique_id=1096641575]
+modulate = Color(0.4, 0.6, 1, 1)
+texture = ExtResource("11_sw0")
+
+[node name="interactable" type="Area2D" parent="RightContainer/RightViewport/BlueButton2" unique_id=164710613]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("8_intscript")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightContainer/RightViewport/BlueButton2/interactable" unique_id=1758104921]
+shape = SubResource("Sub_btn4_interact")
+
+[node name="ExitDoor2" type="StaticBody2D" parent="RightContainer/RightViewport" unique_id=586605063]
+z_index = 1
+z_as_relative = false
+position = Vector2(922, 1119)
+script = ExtResource("5_doorscript")
+player_id = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightContainer/RightViewport/ExitDoor2" unique_id=2039235297]
+shape = SubResource("Sub_door2_phys")
+
+[node name="DoorSprite" type="Sprite2D" parent="RightContainer/RightViewport/ExitDoor2" unique_id=1768269185]
+texture = ExtResource("14_door")
+flip_v = true
+
+[node name="interactable" type="Area2D" parent="RightContainer/RightViewport/ExitDoor2" unique_id=2131846599]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("8_intscript")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightContainer/RightViewport/ExitDoor2/interactable" unique_id=1569342051]
+shape = SubResource("Sub_door2_interact")
+
+[node name="LevelPuzzle2" type="Node" parent="RightContainer/RightViewport" unique_id=119516726]
+script = ExtResource("7_lpscript")
+player_id = 2
+
+[node name="Walls2" type="StaticBody2D" parent="RightContainer/RightViewport" unique_id=1205379115]
+
+[node name="TopWall" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=614689490]
+position = Vector2(566.5, 15)
+shape = SubResource("Sub_wall_h2")
+
+[node name="LeftWall" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=157339204]
+position = Vector2(20, 554)
+shape = SubResource("Sub_wall_v2")
+
+[node name="RightWall" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=1617487983]
+position = Vector2(1116, 568.5)
+shape = SubResource("Sub_wall_v2")
+
+[node name="BottomWall" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=1857215487]
+position = Vector2(564.5, 1126.3438)
+shape = SubResource("Sub_wall_h2")
+
+[node name="blueWall" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=655241798]
+position = Vector2(95, 897.25)
+shape = SubResource("RectangleShape2D_dinhu")
+
+[node name="blueWall2" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=2119136542]
+position = Vector2(216.5, 695.875)
+shape = SubResource("RectangleShape2D_kvuet")
+
+[node name="bluesWall3" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=1642957329]
+position = Vector2(124, 518)
+shape = SubResource("RectangleShape2D_trtic")
+
+[node name="blueWall4" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=2072811371]
+position = Vector2(853, 719.5)
+shape = SubResource("RectangleShape2D_ir15t")
+
+[node name="blueWall5" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=53858846]
+position = Vector2(680, 757)
+shape = SubResource("RectangleShape2D_ca42v")
+
+[node name="blueWall6" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=1709751119]
+position = Vector2(618, 880)
+shape = SubResource("RectangleShape2D_rysoc")
+
+[node name="redWall" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=390756766]
+position = Vector2(746.5, 187)
+shape = SubResource("RectangleShape2D_ssvqc")
+
+[node name="redWall2" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=1124948239]
+position = Vector2(761.8125, 431.0625)
+shape = SubResource("RectangleShape2D_264po")
+
+[node name="redWall3" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=567278798]
+position = Vector2(578.75, 92)
+shape = SubResource("RectangleShape2D_1kice")
+
+[node name="redWall4" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=1417169480]
+position = Vector2(1035.5, 87)
+shape = SubResource("RectangleShape2D_5newe")
+
+[node name="redWall5" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=1295581859]
+position = Vector2(944.5, 139.5)
+shape = SubResource("RectangleShape2D_37s47")
+
+[node name="redWall6" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=674398156]
+position = Vector2(972, 966.5)
+shape = SubResource("RectangleShape2D_bt5mj")
+
+[node name="redWall7" type="CollisionShape2D" parent="RightContainer/RightViewport/Walls2" unique_id=806074144]
+position = Vector2(1036.75, 1054.5)
+shape = SubResource("RectangleShape2D_e1j6l")
+
+[node name="Level2" parent="RightContainer/RightViewport" unique_id=1703235891 instance=ExtResource("2_dinhu")]
+z_index = 0
+position = Vector2(-1126, -1)
+
+[node name="EnemyT" parent="RightContainer/RightViewport" unique_id=1182364674 instance=ExtResource("12_kvuet")]
+position = Vector2(970, 486)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1620448050]
+
+[node name="CountdownLabelRed" type="Label" parent="UI" unique_id=307099386]
 visible = false
 anchors_preset = 5
 anchor_left = 0.5
@@ -316,7 +511,7 @@ offset_bottom = 24.0
 label_settings = SubResource("Sub_label_red")
 horizontal_alignment = 1
 
-[node name="CountdownLabelBlue" type="Label" parent="UI" unique_id=873856616]
+[node name="CountdownLabelBlue" type="Label" parent="UI" unique_id=333909087]
 visible = false
 anchors_preset = 5
 anchor_left = 0.5
@@ -328,7 +523,7 @@ offset_bottom = 42.0
 label_settings = SubResource("Sub_label_blue")
 horizontal_alignment = 1
 
-[node name="PuzzleCompleteLabel" type="Label" parent="UI" unique_id=1450259231]
+[node name="PuzzleCompleteLabel" type="Label" parent="UI" unique_id=593466021]
 visible = false
 anchors_preset = 5
 anchor_left = 0.5
@@ -340,15 +535,15 @@ offset_bottom = 62.0
 label_settings = SubResource("Sub_label_complete")
 horizontal_alignment = 1
 
-[node name="TimerRed" type="Timer" parent="UI" unique_id=629149416]
+[node name="TimerRed" type="Timer" parent="UI" unique_id=2095597513]
 wait_time = 5.0
 one_shot = true
 
-[node name="TimerBlue" type="Timer" parent="UI" unique_id=762317782]
+[node name="TimerBlue" type="Timer" parent="UI" unique_id=857163]
 wait_time = 5.0
 one_shot = true
 
-[node name="CountdownSound" type="AudioStreamPlayer" parent="UI" unique_id=778596043]
+[node name="CountdownSound" type="AudioStreamPlayer" parent="UI" unique_id=2100862321]
 
 [connection signal="timeout" from="UI/TimerRed" to="." method="_on_red_timer_timeout"]
 [connection signal="timeout" from="UI/TimerBlue" to="." method="_on_blue_timer_timeout"]
