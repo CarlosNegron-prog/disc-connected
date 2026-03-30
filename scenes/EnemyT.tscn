@@ -53,6 +53,8 @@ radius = 131.06105
 
 [node name="Triangle" type="CharacterBody2D" parent="." unique_id=1880707407]
 script = ExtResource("1_cjt2j")
+speed = 115.0
+acceleration = 0.04
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Triangle" unique_id=1132831857]
 position = Vector2(0, -12)

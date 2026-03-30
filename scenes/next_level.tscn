@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://cqy6gdqcdk3ac" path="res://scripts/interactable.gd" id="7_twfgh"]
 [ext_resource type="Script" uid="uid://biwqltvk2tc3j" path="res://scripts/exit_door.gd" id="8_bau2p"]
 [ext_resource type="Texture2D" uid="uid://dcw4heveae41f" path="res://map/door/door1_bis.png" id="9_8rh8h"]
+[ext_resource type="PackedScene" uid="uid://donbfrr61bx7" path="res://scenes/EnemyT.tscn" id="10_twfgh"]
 
 [sub_resource type="RectangleShape2D" id="Sub_kz1"]
 size = Vector2(480, 20)
@@ -80,13 +81,17 @@ position = Vector2(-78, -43)
 
 [node name="Chest" type="StaticBody2D" parent="." unique_id=2047420562]
 z_index = 6
-position = Vector2(1283, 518)
-rotation = -1.5707964
+position = Vector2(1475, 619)
+rotation = 3.1415927
 
 [node name="ChestSprite" type="Sprite2D" parent="Chest" unique_id=2033333103]
 texture = ExtResource("6_8rh8h")
 
 [node name="interactable" type="Area2D" parent="Chest" unique_id=186472970]
+light_mask = 0
+visibility_layer = 2
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("7_twfgh")
 
 [node name="interactionDist" type="CollisionShape2D" parent="Chest/interactable" unique_id=1171287138]
@@ -109,6 +114,10 @@ texture = ExtResource("9_8rh8h")
 flip_v = true
 
 [node name="interactable" type="Area2D" parent="ExitDoor" unique_id=987116283]
+light_mask = 0
+visibility_layer = 2
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("7_twfgh")
 
 [node name="interactDist" type="CollisionShape2D" parent="ExitDoor/interactable" unique_id=1561214035]
@@ -117,3 +126,15 @@ shape = SubResource("CircleShape2D_twfgh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitDoor" unique_id=649704707]
 position = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_bau2p")
+
+[node name="EnemyT" parent="." unique_id=1218782301 instance=ExtResource("10_twfgh")]
+z_index = 1
+position = Vector2(344.99997, 407)
+
+[node name="EnemyT2" parent="." unique_id=1616291763 instance=ExtResource("10_twfgh")]
+z_index = 1
+position = Vector2(1104, 736)
+
+[node name="EnemyT3" parent="." unique_id=5190695 instance=ExtResource("10_twfgh")]
+z_index = 1
+position = Vector2(717, 1252)
