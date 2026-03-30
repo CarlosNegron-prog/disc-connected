@@ -5,8 +5,8 @@
 [ext_resource type="FontFile" uid="uid://cjh8sy4fnc1gf" path="res://Intro Elements/10 Font/CyberpunkCraftpixPixel.otf" id="3_mu3nh"]
 [ext_resource type="Texture2D" uid="uid://cjue0unix2mjj" path="res://Intro Elements/9 Other/wasd.png" id="4_t44iy"]
 [ext_resource type="Texture2D" uid="uid://bvrejn3n4t5v3" path="res://Intro Elements/2 Bars/EnergyBar1.png" id="5_uqp78"]
-[ext_resource type="Texture2D" uid="uid://dqk7wmboexe0t" path="res://Charactersbynat/sr5z540c50c616aws3.png" id="6_cqsit"]
 [ext_resource type="Texture2D" uid="uid://n23wjiyigy75" path="res://Intro Elements/9 Other/Screenshot 2026-03-30 at 15-34-48 Cyber Intrusion Free GUI Pixel Art Pack - CraftPix.net.png" id="7_8llr7"]
+[ext_resource type="Texture2D" uid="uid://dqk7wmboexe0t" path="res://Charactersbynat/player2Disc.png" id="8_6uy8v"]
 [ext_resource type="Texture2D" uid="uid://do54wdwk1jnv" path="res://Intro Elements/9 Other/teclas.png" id="8_ple1s"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_uq7hs"]
@@ -140,7 +140,6 @@ label_settings = SubResource("LabelSettings_qpc2v")
 [node name="Sr5z540c50c616Aws3" type="Sprite2D" parent="." unique_id=27900752]
 position = Vector2(703, 477)
 scale = Vector2(2.546875, 2.8125)
-texture = ExtResource("6_cqsit")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=300836263]
 layout_mode = 1
@@ -156,7 +155,8 @@ offset_bottom = 78.67999
 color = Color(0, 0, 0, 1)
 
 [node name="Screenshot20260330At153448CyberIntrusionFreeGuiPixelArtPackCraftPix_net" type="Sprite2D" parent="." unique_id=1654576660]
-position = Vector2(598, 169)
+position = Vector2(515.00006, 141)
+scale = Vector2(1.0984849, 1.3113208)
 texture = ExtResource("7_8llr7")
 
 [node name="Teclas" type="Sprite2D" parent="." unique_id=55284588]
@@ -263,3 +263,8 @@ offset_right = 67.47974
 offset_bottom = 139.75291
 rotation = -1.5707964
 color = Color(0, 0, 0, 1)
+
+[node name="Player2Disc" type="Sprite2D" parent="." unique_id=1083139876]
+position = Vector2(727.99994, 475.99997)
+scale = Vector2(3.0234368, 3.0234377)
+texture = ExtResource("8_6uy8v")

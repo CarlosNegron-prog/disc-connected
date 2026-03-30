@@ -1,0 +1,288 @@
+[gd_scene format=3 uid="uid://c48nmwcv7mg7r"]
+
+[ext_resource type="Texture2D" uid="uid://cre2s12ectnmk" path="res://Intro Elements/9 Other/Screenshot 2026-03-30 at 15-30-42 Cyber Intrusion Free GUI Pixel Art Pack - CraftPix.net.png" id="1_qvxk8"]
+[ext_resource type="FontFile" uid="uid://cjh8sy4fnc1gf" path="res://Intro Elements/10 Font/CyberpunkCraftpixPixel.otf" id="2_xs245"]
+[ext_resource type="Script" uid="uid://bn7x0bkpxcg6l" path="res://scripts/game_info_6.gd" id="3_sbqof"]
+[ext_resource type="Texture2D" uid="uid://n23wjiyigy75" path="res://Intro Elements/9 Other/Screenshot 2026-03-30 at 15-34-48 Cyber Intrusion Free GUI Pixel Art Pack - CraftPix.net.png" id="4_pvnjk"]
+[ext_resource type="Texture2D" uid="uid://dpp2kajdt10q3" path="res://map2/objects/digicode_disabled.png" id="5_822fv"]
+[ext_resource type="Texture2D" uid="uid://duf30i5usucv2" path="res://map2/objects/digicode.png" id="6_r1o0p"]
+[ext_resource type="Texture2D" uid="uid://bh8gsaubsoh6e" path="res://map2/chest/chest0_enabled.png" id="7_ionnb"]
+[ext_resource type="Texture2D" uid="uid://dr0mjf1wlwsco" path="res://map2/door/door1_bis.png" id="8_a71gk"]
+[ext_resource type="Texture2D" uid="uid://by6cxg6ly87m" path="res://map2/switch2/switch0.png" id="9_yik7s"]
+[ext_resource type="Texture2D" uid="uid://duvyrk2ipfvl8" path="res://map2/switch2/switch2.png" id="10_q02us"]
+[ext_resource type="Texture2D" uid="uid://kywr5e6l5qrs" path="res://Intro Elements/9 Other/Screenshot 2026-03-30 at 17-25-15 E tecla animated - Buscar con Google.png" id="11_1kvxo"]
+[ext_resource type="Texture2D" uid="uid://wbm7iyuvcjgu" path="res://Intro Elements/9 Other/Screenshot 2026-03-30 at 17-26-50 Enter tecla animated - Buscar con Google.png" id="12_ru5x3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t0pbm"]
+font = ExtResource("2_xs245")
+font_size = 68
+font_color = Color(0.07450981, 0.69803923, 0.9490196, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0wg8x"]
+font = ExtResource("2_xs245")
+font_size = 39
+font_color = Color(0.07450981, 0.69803923, 0.9490196, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jcj2g"]
+font = ExtResource("2_xs245")
+font_size = 30
+font_color = Color(0.07450981, 0.69803923, 0.9490196, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_iyhb3"]
+font = ExtResource("2_xs245")
+font_size = 36
+font_color = Color(0.07450981, 0.69803923, 0.9490196, 1)
+
+[node name="GameInfo6" type="Control" unique_id=1512383680]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Screenshot20260330At153042CyberIntrusionFreeGuiPixelArtPackCraftPix_net" type="Sprite2D" parent="." unique_id=1280378235]
+position = Vector2(640, 359.99997)
+scale = Vector2(1.4918414, 1.4723926)
+texture = ExtResource("1_qvxk8")
+
+[node name="Label" type="Label" parent="." unique_id=2133499469]
+layout_mode = 0
+offset_left = 639.0
+offset_top = 23.0
+offset_right = 1054.0
+offset_bottom = 71.0
+text = "Loading Data ..."
+label_settings = SubResource("LabelSettings_t0pbm")
+
+[node name="Button" type="Button" parent="." unique_id=1700507426]
+layout_mode = 0
+offset_left = 1107.0
+offset_top = 608.0
+offset_right = 1269.0
+offset_bottom = 703.0
+
+[node name="Label3" type="Label" parent="." unique_id=89652639]
+layout_mode = 0
+offset_left = 1134.0
+offset_top = 618.0
+offset_right = 1275.0
+offset_bottom = 703.0
+text = "Play
+  ->"
+label_settings = SubResource("LabelSettings_0wg8x")
+script = ExtResource("3_sbqof")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=516722198]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.022000002
+anchor_top = 0.18100001
+anchor_right = 0.022000002
+anchor_bottom = 0.18100001
+offset_left = 336.84
+offset_top = -75.32001
+offset_right = 531.84
+offset_bottom = 78.67999
+color = Color(0, 0, 0, 1)
+
+[node name="Screenshot20260330At153448CyberIntrusionFreeGuiPixelArtPackCraftPix_net" type="Sprite2D" parent="." unique_id=89923876]
+position = Vector2(859, 159)
+scale = Vector2(1.0681819, 1.1698114)
+texture = ExtResource("4_pvnjk")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=294852485]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 392.0
+offset_right = 226.0
+offset_bottom = 511.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2" unique_id=1229774584]
+layout_mode = 0
+offset_left = 210.0
+offset_top = -1.0
+offset_right = 326.0
+offset_bottom = 118.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2" unique_id=1561384796]
+layout_mode = 0
+offset_left = -163.0
+offset_top = -109.0
+offset_right = -48.0
+offset_bottom = 10.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/ColorRect2" unique_id=937031929]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 215.0
+offset_right = 279.0
+offset_bottom = 334.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/ColorRect2/ColorRect" unique_id=425075443]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 11.526672
+offset_right = 22.998322
+offset_bottom = 146.8532
+rotation = -1.5707964
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2/ColorRect2/ColorRect" unique_id=1879783844]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 1.0
+offset_right = 130.0
+offset_bottom = 120.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/ColorRect2/ColorRect/ColorRect2" unique_id=1112287697]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 11.526672
+offset_right = 21.053345
+offset_bottom = 146.8532
+rotation = -1.5707964
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2/ColorRect2" unique_id=757917438]
+layout_mode = 0
+offset_left = -163.0
+offset_top = -109.0
+offset_right = -48.0
+offset_bottom = 10.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/ColorRect2/ColorRect2" unique_id=877424627]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 215.0
+offset_right = 279.0
+offset_bottom = 334.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/ColorRect2/ColorRect2/ColorRect" unique_id=683894536]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 11.526672
+offset_right = 21.053345
+offset_bottom = 146.8532
+rotation = -1.5707964
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2/ColorRect2/ColorRect2/ColorRect" unique_id=224522939]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 1.0
+offset_right = 130.0
+offset_bottom = 120.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/ColorRect2/ColorRect2/ColorRect/ColorRect2" unique_id=1178630297]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 4.4263916
+offset_right = 67.47974
+offset_bottom = 139.75291
+rotation = -1.5707964
+color = Color(0, 0, 0, 1)
+
+[node name="DigicodeDisabled" type="Sprite2D" parent="." unique_id=1123183598]
+position = Vector2(459, 485.00003)
+scale = Vector2(8.833333, 7.590909)
+texture = ExtResource("5_822fv")
+
+[node name="Digicode" type="Sprite2D" parent="." unique_id=1784188217]
+position = Vector2(556, 487.99997)
+scale = Vector2(8.388889, 7.681818)
+texture = ExtResource("6_r1o0p")
+
+[node name="Chest0Enabled" type="Sprite2D" parent="." unique_id=2049134649]
+position = Vector2(772, 467)
+scale = Vector2(4.515623, 4.140624)
+texture = ExtResource("7_ionnb")
+
+[node name="Door1Bis" type="Sprite2D" parent="." unique_id=969884222]
+position = Vector2(1064.0001, 472.00003)
+scale = Vector2(3.40625, 4.796875)
+texture = ExtResource("8_a71gk")
+
+[node name="Switch1" type="Sprite2D" parent="." unique_id=1531601326]
+position = Vector2(121.00001, 480.00003)
+scale = Vector2(5.1538463, 3.90625)
+texture = ExtResource("9_yik7s")
+
+[node name="Switch3" type="Sprite2D" parent="." unique_id=1322308988]
+position = Vector2(254.00002, 472)
+scale = Vector2(4.730769, 4.1875)
+texture = ExtResource("10_q02us")
+
+[node name="Label4" type="Label" parent="." unique_id=2087776428]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 397.0
+offset_right = 247.0
+offset_bottom = 430.0
+text = "Lever "
+label_settings = SubResource("LabelSettings_jcj2g")
+
+[node name="Label4" type="Label" parent="Label4" unique_id=370561653]
+layout_mode = 0
+offset_left = 319.0
+offset_top = -6.0
+offset_right = 482.0
+offset_bottom = 27.0
+text = "Button"
+label_settings = SubResource("LabelSettings_jcj2g")
+
+[node name="Label4" type="Label" parent="Label4/Label4" unique_id=1840652717]
+layout_mode = 0
+offset_left = 278.0
+offset_top = -4.0
+offset_right = 441.0
+offset_bottom = 29.0
+text = "Chest"
+label_settings = SubResource("LabelSettings_jcj2g")
+
+[node name="Label4" type="Label" parent="Label4/Label4/Label4" unique_id=1058086217]
+layout_mode = 0
+offset_left = 301.0
+offset_right = 464.0
+offset_bottom = 33.0
+text = "Door"
+label_settings = SubResource("LabelSettings_jcj2g")
+
+[node name="Label2" type="Label" parent="." unique_id=896955901]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 568.0
+offset_right = 1056.0
+offset_bottom = 691.0
+text = "This are the things you can interact with
+Once you transform into a single disc
+Use only e to interact "
+label_settings = SubResource("LabelSettings_iyhb3")
+
+[node name="Screenshot20260330At172515ETeclaAnimatedBuscarConGoogle" type="Sprite2D" parent="." unique_id=1488670424]
+position = Vector2(482.00003, 307.00003)
+scale = Vector2(0.3154763, 0.3006055)
+texture = ExtResource("11_1kvxo")
+
+[node name="Screenshot20260330At172650EnterTeclaAnimatedBuscarConGoogle" type="Sprite2D" parent="." unique_id=65183414]
+position = Vector2(640, 304)
+scale = Vector2(0.14644167, 0.13897058)
+texture = ExtResource("12_ru5x3")
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1608741097]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.028
+offset_left = 591.0
+offset_top = 251.0
+offset_right = 632.0
+offset_bottom = 278.84
+color = Color(0, 0, 0, 1)

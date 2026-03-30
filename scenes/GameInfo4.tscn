@@ -21,7 +21,7 @@ font_color = Color(0.16470589, 1, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_8sy26"]
 font = ExtResource("2_x01q0")
-font_size = 36
+font_size = 20
 font_color = Color(0.16470589, 1, 0, 1)
 
 [node name="GameInfo4" type="Control" unique_id=2115406527]
@@ -68,11 +68,12 @@ anchor_bottom = 0.18100001
 offset_left = 336.84
 offset_top = -75.32001
 offset_right = 531.84
-offset_bottom = 78.67999
+offset_bottom = 81.67999
 color = Color(0, 0, 0, 1)
 
 [node name="Screenshot20260330At153448CyberIntrusionFreeGuiPixelArtPackCraftPix_net" type="Sprite2D" parent="." unique_id=1131562399]
-position = Vector2(863, 167)
+position = Vector2(725.99994, 162)
+scale = Vector2(1.0757576, 1.1886792)
 texture = ExtResource("4_0mbs8")
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=861932675]
@@ -417,10 +418,10 @@ label_settings = SubResource("LabelSettings_jyypi")
 
 [node name="Label3" type="Label" parent="." unique_id=1704959375]
 layout_mode = 0
-offset_left = 1155.0
-offset_top = 623.0
-offset_right = 1296.0
-offset_bottom = 704.0
-text = "Play
-  ->"
+offset_left = 1136.0
+offset_top = 638.0
+offset_right = 1314.0
+offset_bottom = 719.0
+text = "Next Rule
+     ->"
 label_settings = SubResource("LabelSettings_8sy26")
