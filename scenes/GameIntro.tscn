@@ -23,25 +23,25 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_kypa7"]
 font = ExtResource("2_weunu")
-font_size = 30
+font_size = 91
 font_color = Color(0.23483858, 0.67936903, 0.99999994, 1)
 stacked_outline_count = 3
-stacked_outline_0/size = 1
+stacked_outline_0/size = 2
 stacked_outline_0/color = Color(0, 0.619214, 0.96679324, 1)
 stacked_outline_1/size = 2
 stacked_outline_1/color = Color(0.047371797, 0.5412204, 0.82810175, 1)
-stacked_outline_2/size = 14
+stacked_outline_2/size = 30
 
 [sub_resource type="LabelSettings" id="LabelSettings_fc5m0"]
 font = ExtResource("7_xg040")
-font_size = 28
+font_size = 80
 font_color = Color(0.23529412, 0.6784314, 1, 1)
 stacked_outline_count = 3
-stacked_outline_0/size = 1
+stacked_outline_0/size = 2
 stacked_outline_0/color = Color(0, 0.61960787, 0.9647059, 1)
-stacked_outline_1/size = 1
+stacked_outline_1/size = 2
 stacked_outline_1/color = Color(0.047058824, 0.5411765, 0.827451, 1)
-stacked_outline_2/size = 10
+stacked_outline_2/size = 15
 
 [node name="GameIntro" type="Control" unique_id=1676071233]
 layout_mode = 3
@@ -54,21 +54,21 @@ script = ExtResource("1_eqf85")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1719809623]
 layout_mode = 0
-offset_right = 480.0
-offset_bottom = 270.0
+offset_right = 1280.0
+offset_bottom = 720.0
 color = Color(0, 0, 0, 1)
 
 [node name="Logo1" type="Sprite2D" parent="." unique_id=367469468]
-position = Vector2(239.00002, 135)
-scale = Vector2(1.6561403, 2.347826)
+position = Vector2(636.4999, 360.00003)
+scale = Vector2(4.3543854, 6.26087)
 texture = ExtResource("1_5ipex")
 
 [node name="Label" type="Label" parent="." unique_id=2078138184]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 45.0
-offset_right = 348.0
-offset_bottom = 95.0
+offset_left = 123.0
+offset_top = 151.0
+offset_right = 1003.0
+offset_bottom = 247.0
 text = "DISC-CONNECTED"
 label_settings = SubResource("LabelSettings_kypa7")
 horizontal_alignment = 1
@@ -76,44 +76,84 @@ vertical_alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=1426912853]
 layout_mode = 0
-offset_left = 203.0
-offset_top = 97.0
-offset_right = 287.0
-offset_bottom = 132.0
+offset_left = 567.0
+offset_top = 290.0
+offset_right = 749.0
+offset_bottom = 366.0
+
+[node name="Label2" type="Label" parent="Button" unique_id=120001418]
+layout_mode = 0
+offset_left = 20.0
+offset_top = -10.0
+offset_right = 170.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 20
+text = "Play"
+label_settings = SubResource("LabelSettings_fc5m0")
 
 [node name="Screenshot20260329At231637CyberIntrusionFreeGuiPixelArtPackCraftPix_net" type="Sprite2D" parent="." unique_id=189569913]
-position = Vector2(106.00001, 237.00002)
-scale = Vector2(0.35220996, 0.40454483)
+position = Vector2(302, 633.391)
+scale = Vector2(1.055, 1.214)
 texture = ExtResource("3_ybe4d")
 
 [node name="Frame56" type="Sprite2D" parent="." unique_id=2033074809]
-position = Vector2(138, 227.5)
-scale = Vector2(0.0625, 0.15625033)
+position = Vector2(392.5, 672.25)
+scale = Vector2(0.34375, 0.4218751)
 texture = ExtResource("4_eqf85")
 
 [node name="Frame57" type="Sprite2D" parent="." unique_id=121509573]
-position = Vector2(135.875, 226)
-scale = Vector2(0.11718816, 0.062500186)
+position = Vector2(399, 666.99994)
+scale = Vector2(0.57812464, 0.4374998)
+texture = ExtResource("4_eqf85")
+
+[node name="Frame57" type="Sprite2D" parent="Frame57" unique_id=353128610]
+position = Vector2(-323.45966, 6.8572187)
+scale = Vector2(0.40320274, 0.6378351)
+texture = ExtResource("4_eqf85")
+
+[node name="Frame57" type="Sprite2D" parent="Frame57/Frame57" unique_id=1485659055]
+position = Vector2(-11.901779, -13.379363)
+scale = Vector2(1.1330061, 1.0601935)
 texture = ExtResource("4_eqf85")
 
 [node name="Frame58" type="Sprite2D" parent="." unique_id=1708195587]
-position = Vector2(136.75, 227.375)
-scale = Vector2(0.046875, 0.03906238)
+position = Vector2(403.75, 661.9375)
+scale = Vector2(0.57812506, 0.3789062)
+texture = ExtResource("4_eqf85")
+
+[node name="Frame58" type="Sprite2D" parent="Frame58" unique_id=747870412]
+position = Vector2(-357.62158, 16.000053)
+scale = Vector2(1.4193412, 2.0637856)
+texture = ExtResource("4_eqf85")
+
+[node name="Frame58" type="Sprite2D" parent="Frame58/Frame58" unique_id=852998367]
+position = Vector2(7.6986713, -81.31814)
+scale = Vector2(0.40499932, 0.43245426)
+texture = ExtResource("4_eqf85")
+
+[node name="Frame58" type="Sprite2D" parent="Frame58/Frame58/Frame58" unique_id=765859136]
+position = Vector2(17.100143, -11.564468)
+scale = Vector2(0.40499932, 1.2013217)
+texture = ExtResource("4_eqf85")
+
+[node name="Frame58" type="Sprite2D" parent="Frame58/Frame58/Frame58/Frame58" unique_id=269471411]
+position = Vector2(22.28975, -14.533604)
+scale = Vector2(1.3931081, 1.2929616)
 texture = ExtResource("4_eqf85")
 
 [node name="Frame59" type="Sprite2D" parent="." unique_id=1781082847]
-position = Vector2(139.07813, 246.67967)
-scale = Vector2(0.18261667, 0.1450205)
+position = Vector2(405, 604)
+scale = Vector2(0.71630806, 0.45813033)
 texture = ExtResource("4_eqf85")
 
 [node name="Frame60" type="Sprite2D" parent="." unique_id=1935963265]
-position = Vector2(136.74759, 249.55257)
-scale = Vector2(0.14077605, 0.15296572)
+position = Vector2(401, 590.5)
+scale = Vector2(0.8516383, 0.78124964)
 texture = ExtResource("4_eqf85")
 
 [node name="Frame61" type="Sprite2D" parent="." unique_id=1072195530]
-position = Vector2(136, 247)
-scale = Vector2(0.0686034, 0.05523827)
+position = Vector2(400, 599)
+scale = Vector2(0.5968017, 0.4338694)
 texture = ExtResource("4_eqf85")
 
 [node name="Frame65" type="Sprite2D" parent="." unique_id=1128006948]
@@ -147,80 +187,81 @@ scale = Vector2(0.047851603, 0.16845605)
 texture = ExtResource("4_eqf85")
 
 [node name="1" type="Sprite2D" parent="." unique_id=271740508]
-position = Vector2(239.00002, 193.7024)
+position = Vector2(630, 516.45)
 rotation = -3.1415927
-scale = Vector2(1.2812499, 0.51277906)
+scale = Vector2(3.481, 1.394)
 texture = ExtResource("5_q2id6")
 
 [node name="Screenshot20260329At235133CyberIntrusionFreeGuiPixelArtPackCraftPix_net2" type="Sprite2D" parent="." unique_id=659254853]
-position = Vector2(113.00001, 259)
-scale = Vector2(0.37499943, 1.2608687)
+position = Vector2(324.00003, 710)
+scale = Vector2(1.125, 3.785)
 texture = ExtResource("6_t5y20")
 
-[node name="Label2" type="Label" parent="." unique_id=120001418]
-layout_mode = 0
-offset_left = 220.0
-offset_top = 97.0
-offset_right = 273.0
-offset_bottom = 129.0
-theme_override_font_sizes/font_size = 20
-text = "Play"
-label_settings = SubResource("LabelSettings_fc5m0")
-
 [node name="2" type="Sprite2D" parent="." unique_id=488683183]
-position = Vector2(290, 134)
-scale = Vector2(1.1666666, 0.97619045)
+position = Vector2(757, 364)
+scale = Vector2(2.9333332, 2.345238)
 texture = ExtResource("8_fe2td")
 
 [node name="Icon02" type="Sprite2D" parent="." unique_id=1727343826]
-position = Vector2(440, 57)
+position = Vector2(1154, 152)
+scale = Vector2(2.25, 2.25)
 texture = ExtResource("9_kfcxg")
 
 [node name="Icon04" type="Sprite2D" parent="." unique_id=469454721]
-position = Vector2(406, 61)
+position = Vector2(1086, 163)
+scale = Vector2(1.7, 1.7)
 texture = ExtResource("10_kxqqx")
 
 [node name="Icon07" type="Sprite2D" parent="." unique_id=1366254741]
-position = Vector2(442, 138)
+position = Vector2(1153, 373)
+scale = Vector2(2.172, 2.172)
 texture = ExtResource("11_3eq0r")
 
 [node name="Icon08" type="Sprite2D" parent="." unique_id=1725532684]
-position = Vector2(428, 138)
+position = Vector2(1123, 373)
+scale = Vector2(2.25, 2.25)
 texture = ExtResource("12_rd3k1")
 
 [node name="Icon36" type="Sprite2D" parent="." unique_id=567382628]
-position = Vector2(423, 57)
+position = Vector2(1118, 154.875)
+scale = Vector2(2.266, 2.266)
 texture = ExtResource("13_jcbav")
 
 [node name="Icon32" type="Sprite2D" parent="." unique_id=1762033325]
-position = Vector2(412, 138)
+position = Vector2(1090, 372)
 rotation = -1.5707964
+scale = Vector2(2.051, 2.051)
 texture = ExtResource("14_t01qw")
 
 [node name="EnergyBar2" type="Sprite2D" parent="." unique_id=877422106]
-position = Vector2(127.5, 67.5)
-scale = Vector2(1.1874998, 2.2)
+position = Vector2(374.5, 194.99998)
+scale = Vector2(3.3124998, 5.9999986)
 texture = ExtResource("15_vquer")
 
 [node name="Frame08" type="Sprite2D" parent="." unique_id=291012209]
-position = Vector2(239, 235)
+position = Vector2(626, 631)
+scale = Vector2(2.641, 2.641)
 texture = ExtResource("16_vyoqu")
 
 [node name="Frame11" type="Sprite2D" parent="." unique_id=545234628]
-position = Vector2(174, 237)
+position = Vector2(494.00003, 634)
+scale = Vector2(3.1875, 2.90625)
 texture = ExtResource("17_64pr7")
 
 [node name="Frame79" type="Sprite2D" parent="." unique_id=769150435]
-position = Vector2(389, 236)
+position = Vector2(1036, 631.00006)
+scale = Vector2(2.993001, 2.656)
 texture = ExtResource("18_uoe4r")
 
 [node name="Frame80" type="Sprite2D" parent="." unique_id=462878333]
-position = Vector2(350, 236)
+position = Vector2(927.00006, 631.00006)
+scale = Vector2(2.9529994, 2.656)
 texture = ExtResource("19_nuf3j")
 
 [node name="Frame12" type="Sprite2D" parent="." unique_id=1632063056]
-position = Vector2(296, 237)
+position = Vector2(774, 631)
 rotation = 1.5707964
+scale = Vector2(3.029915, 3.7606845)
 texture = ExtResource("17_64pr7")
 
 [node name="Button2" type="Button" parent="." unique_id=1214054815]
@@ -228,7 +269,7 @@ show_behind_parent = true
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.056
-offset_left = 433.0
-offset_top = 51.0
-offset_right = 447.0
-offset_bottom = 47.879997
+offset_left = 1140.0
+offset_top = 138.0
+offset_right = 1168.0
+offset_bottom = 125.68
