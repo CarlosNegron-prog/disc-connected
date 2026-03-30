@@ -1,7 +1,5 @@
 extends Area2D
 
-# This looks for a Timer node that is a CHILD of this Hitbox
-@onready var timer: Timer = $Timer2 
 const GAME_OVER_SCENE = "res://scenes/GameOver.tscn"
 
 func _on_body_entered(body: Node2D) -> void:
