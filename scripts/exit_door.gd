@@ -33,4 +33,4 @@ func on_door_interacted(_p_id: int) -> void:
 	if door_used:
 		return
 	door_used = true
-	get_tree().change_scene_to_file("res://scenes/GameIntro.tscn")
+	get_tree().change_scene_to_file("res://scenes/YouWin.tscn")
